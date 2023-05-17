@@ -1,0 +1,1 @@
+import{_ as e,o as a,c as t,R as r}from"./chunks/framework.42a71e76.js";const p=JSON.parse('{"title":"demo平台","description":"","frontmatter":{},"headers":[],"relativePath":"api/README.md","filePath":"api/README.md"}'),l={name:"api/README.md"},o=r("",125),d=[o];function c(s,i,n,h,b,f){return a(),t("div",null,d)}const g=e(l,[["render",c]]);export{p as __pageData,g as default};
