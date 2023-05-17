@@ -8,7 +8,7 @@
     <title>Document</title>
 
     <script src="https://unpkg.com/mxdraw" crossorigin="anonymous"></script>
-    <script src="./mxcad.umd.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/mxdraw" crossorigin="anonymous"></script>
     <script>
         const { MxFun, loadCoreCode } = Mx
         const { loadMxCADassembly } = mxcad
@@ -38,9 +38,6 @@
                         });
                     }
                 })
-            },
-            (fileName, base)=> {
-                return `http://localhost:4001/mxcad_docs/@fs/D:/web/MxCADOnline/MxDrawPlugin/mxcad/public/wasm/2d-st/${fileName}`
             }
             )
             )
