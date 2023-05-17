@@ -1,1 +1,0 @@
-import{_ as e,o as t,c as a}from"./chunks/framework.42a71e76.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"guide/分组/原理.md","filePath":"guide/分组/原理.md"}'),r={name:"guide/分组/原理.md"};function o(s,c,n,d,i,_){return t(),a("div")}const f=e(r,[["render",o]]);export{m as __pageData,f as default};
