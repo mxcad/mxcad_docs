@@ -8,7 +8,7 @@
     <title>Document</title>
 
     <script src="https://unpkg.com/mxdraw" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/mxcad" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/mxcad@1.0.44/dist/mxcad.umd.js" crossorigin="anonymous"></script>
     <script>
         const { MxFun, loadCoreCode } = Mx
         const { loadMxCADassembly } = mxcad
@@ -39,6 +39,10 @@
                     }
                 })
             },
+            (fileName, base)=> {
+                console.log(fileName, base)
+                return `https://unpkg.com/mxcad@1.0.44/dist/wasm/2d/${fileName}`
+            }
             )
             )
 
