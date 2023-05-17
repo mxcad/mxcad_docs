@@ -8,7 +8,7 @@
     <title>Document</title>
 
     <script src="https://unpkg.com/mxdraw" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/mxcad@1.0.44/dist/mxcad.umd.js" crossorigin="anonymous"></script>
+    <script src="./mxcad.umd.js" crossorigin="anonymous"></script>
     <script>
         const { MxFun, loadCoreCode } = Mx
         const { loadMxCADassembly } = mxcad
@@ -34,14 +34,13 @@
                             mxDraw.getRenderer().getSize(size);
                             const mxcadObj = MxCpp.App.CreateMxCAD(size.width, size.height, "myCanvas", mxDraw.isWebgl2(), mxDraw.getId());
                             mxDraw.initMxCpp(mxcadObj);
-                            mxcadObj.openWebFile("test2.mxweb");
+                            mxcadObj.openWebFile("http://localhost:4001/mxcad_docs/guide/test2.mxweb");
                         });
                     }
                 })
             },
             (fileName, base)=> {
-                console.log(fileName, base)
-                return `https://unpkg.com/mxcad@1.0.44/dist/wasm/2d/${fileName}`
+                return `http://localhost:4001/mxcad_docs/@fs/D:/web/MxCADOnline/MxDrawPlugin/mxcad/public/wasm/2d-st/${fileName}`
             }
             )
             )

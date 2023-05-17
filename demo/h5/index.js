@@ -12,7 +12,7 @@ const server = http.createServer((req, res) => {
 
   res.setHeader("Cross-Origin-Embedder-Policy", "require-corp");
   // 跨域
-  res.setHeader('Access-Control-Allow-Origin', 'https://unpkg.com');
+  res.setHeader('Access-Control-Allow-Origin', '*');
   // 处理请求
   let filePath = path.join(PUBLIC_DIR, req.url === '/' ? 'index.html' : req.url);
   fs.readFile(filePath, (err, data) => {
