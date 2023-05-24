@@ -1,4 +1,4 @@
-import{a5 as u,L as E,M as i,Q as l,a6 as f,a7 as T,a8 as v,a9 as D,aa as C,ab as R,ac as w,ad as P,ae as S,af as A,d as H,u as O,v as V,l as N,ag as L,ah as I,ai as k,aj as _}from"./chunks/framework.b34656dc.js";import{t as m}from"./chunks/theme.c997b15d.js";let y={},h={};function F(e){y=e}function j(e){h=e}function ae(){G(),B()}function G(){const e=window;e._vue||(e._vue=y)}function B(){const e=window;e._app||(e._app=h)}const W=`import { camelize } from '@vue/shared';\r
+import{a5 as u,L as E,M as a,Q as l,a6 as f,a7 as T,a8 as v,a9 as D,aa as C,ab as R,ac as w,ad as P,ae as S,af as A,d as H,u as O,v as V,l as N,ag as L,ah as I,ai as k,aj as _}from"./chunks/framework.b34656dc.js";import{t as m}from"./chunks/theme.0b586641.js";let y={},h={};function F(e){y=e}function j(e){h=e}function ie(){G(),B()}function G(){const e=window;e._vue||(e._vue=y)}function B(){const e=window;e._app||(e._app=h)}const W=`import { camelize } from '@vue/shared';\r
 import { capitalize } from '@vue/shared';\r
 import { ComponentPropsOptions as ComponentPropsOptions_2 } from '@vue/runtime-core';\r
 import { computed as computed_2 } from '@vue/reactivity';\r
@@ -3538,9 +3538,9 @@ declare module '@vue/reactivity' {
     runtimeDOMBailTypes: Node | Window
   }
 }
-`;let b=!0,p;async function se(){const e=await i(()=>import("./chunks/editor.main.d83c2780.38c825b8.js"),["assets/chunks/editor.main.d83c2780.38c825b8.js","assets/chunks/framework.b34656dc.js"]).then(r=>r.e);return b&&typeof p=="function"&&(b=!1,p(e)),e.languages.typescript.typescriptDefaults.setCompilerOptions({target:e.languages.typescript.ScriptTarget.Latest,allowNonTsExtensions:!0,moduleResolution:e.languages.typescript.ModuleResolutionKind.NodeJs,module:e.languages.typescript.ModuleKind.CommonJS,noEmit:!0,esModuleInterop:!0,jsx:e.languages.typescript.JsxEmit.Preserve,allowJs:!0}),e.languages.typescript.typescriptDefaults.setDiagnosticsOptions({noSemanticValidation:!1,noSyntaxValidation:!1}),e.languages.typescript.typescriptDefaults.addExtraLib(z,"jsx:type"),e.languages.typescript.typescriptDefaults.addExtraLib(`
+`;let b=!0,p;async function se(){const e=await a(()=>import("./chunks/editor.main.d83c2780.38c825b8.js"),["assets/chunks/editor.main.d83c2780.38c825b8.js","assets/chunks/framework.b34656dc.js"]).then(r=>r.e);return b&&typeof p=="function"&&(b=!1,p(e)),e.languages.typescript.typescriptDefaults.setCompilerOptions({target:e.languages.typescript.ScriptTarget.Latest,allowNonTsExtensions:!0,moduleResolution:e.languages.typescript.ModuleResolutionKind.NodeJs,module:e.languages.typescript.ModuleKind.CommonJS,noEmit:!0,esModuleInterop:!0,jsx:e.languages.typescript.JsxEmit.Preserve,allowJs:!0}),e.languages.typescript.typescriptDefaults.setDiagnosticsOptions({noSemanticValidation:!1,noSyntaxValidation:!1}),e.languages.typescript.typescriptDefaults.addExtraLib(z,"jsx:type"),e.languages.typescript.typescriptDefaults.addExtraLib(`
     declare module 'vue' { ${W} }
-  `,"ts:vue"),await Promise.all([(async()=>{const[{default:r},{default:n},{default:t}]=await Promise.all([i(()=>import("./chunks/editor.worker.9c35f395.dcede9b5.js"),[]),i(()=>import("./chunks/html.worker.b57725c2.47285f38.js"),[]),i(()=>import("./chunks/ts.worker.3260b66b.5dceb272.js"),[])]);window.MonacoEnvironment={getWorker(s,o){return o==="html"||o==="handlebars"||o==="razor"?new n:o==="typescript"||o==="javascript"?new t:new r}}})()]),e}function U(e){p=e||null}const X=Symbol(),d={};function x(e,r){d[e]=r}function de(e){const r=window;return r.importMaps||(r.importMaps=d),e=Y(e),e=e.replace(/import(.*?)from\s+['"](.*?)['"]/g,(n,t,s)=>{const o=s,c=d[o];return c?(d[`${o}`]||(d[`${o}`]=c),`const ${t} = importMaps['${s}']`):n}),e}function Y(e){return e.replace(/import(.*?)from\s+['"]vue['"]/g,(r,n)=>(n=n.replace(/\sas\s/g,":"),`const ${n} = _vue`)).replace(/import 'vue'/g,"")}const le=()=>Math.random().toString(36).slice(2,12),K=e=>typeof e=="object"&&e!==null,J=e=>function(r,n,t,...s){return Array.isArray(t)&&(t=t.map(o=>Array.isArray(o)?o:K(o)&&!o.__v_isVNode?e.createTextVNode(String(o)):o)),e.createVNode(r,n,t,...s)},$=function(e,r){r=Object.assign({ms:300,defaultDirection:"row"},r);const n=E(()=>i(()=>import("./chunks/Demo.10a78ca5.59d595eb.js"),["assets/chunks/Demo.10a78ca5.59d595eb.js","assets/chunks/framework.b34656dc.js","assets/chunks/theme.c997b15d.js"]));e.component("Demo",n),e.config.errorHandler=function(t){console.error(t)},F(Object.assign({},u,{createVNode:J(u)})),j(e),e.provide(X,r),U(r.onMonacoCreated)};const q=`import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+  `,"ts:vue"),await Promise.all([(async()=>{const[{default:r},{default:n},{default:t}]=await Promise.all([a(()=>import("./chunks/editor.worker.9c35f395.dcede9b5.js"),[]),a(()=>import("./chunks/html.worker.b57725c2.47285f38.js"),[]),a(()=>import("./chunks/ts.worker.3260b66b.5dceb272.js"),[])]);window.MonacoEnvironment={getWorker(s,o){return o==="html"||o==="handlebars"||o==="razor"?new n:o==="typescript"||o==="javascript"?new t:new r}}})()]),e}function U(e){p=e||null}const Y=Symbol(),d={};function x(e,r){d[e]=r}function de(e){const r=window;return r.importMaps||(r.importMaps=d),e=X(e),e=e.replace(/import(.*?)from\s+['"](.*?)['"]/g,(n,t,s)=>{const o=s,c=d[o];return c?(d[`${o}`]||(d[`${o}`]=c),`const ${t} = importMaps['${s}']`):n}),e}function X(e){return e.replace(/import(.*?)from\s+['"]vue['"]/g,(r,n)=>(n=n.replace(/\sas\s/g,":"),`const ${n} = _vue`)).replace(/import 'vue'/g,"")}const le=()=>Math.random().toString(36).slice(2,12),K=e=>typeof e=="object"&&e!==null,J=e=>function(r,n,t,...s){return Array.isArray(t)&&(t=t.map(o=>Array.isArray(o)?o:K(o)&&!o.__v_isVNode?e.createTextVNode(String(o)):o)),e.createVNode(r,n,t,...s)},$=function(e,r){r=Object.assign({ms:300,defaultDirection:"row"},r);const n=E(()=>a(()=>import("./chunks/Demo.10a78ca5.d666942a.js"),["assets/chunks/Demo.10a78ca5.d666942a.js","assets/chunks/framework.b34656dc.js","assets/chunks/theme.0b586641.js"]));e.component("Demo",n),e.config.errorHandler=function(t){console.error(t)},F(Object.assign({},u,{createVNode:J(u)})),j(e),e.provide(Y,r),U(r.onMonacoCreated)};const q=`import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import * as three from 'three';
 import { Color } from 'three';
 
@@ -8427,11 +8427,6 @@ export { McEdGetPointWorldDrawObject, McGePoint3d, McGePoint3dArray, McGeTool, M
 
 import { MxDbEntity } from 'mxdraw';
 
-/*** webAssembly 请求加载wasm文件 获取示例结果
- * @param url wasm 文件路径
- * @param importObject 导入对象
- *  */
-export declare function fetchAndInstantiate(url: string, importObject: WebAssembly.Imports): Promise<WebAssembly.WebAssemblyInstantiatedSource>;
 export declare function b64Encode(str: string): string;
 export declare function b64Decode(str: string): string;
 export type FileTypes = {
@@ -9906,6 +9901,243 @@ export declare function drawArc(): Promise<void>;
 export declare function drawEllipticalArc(): void;
 /** 绘制文字 */
 export declare function mxErase(): Promise<void>;
+export declare let MxCpp: MxCppType;
+export declare function loadMxCADassembly(call?: (MxCpp: MxCppType) => void, locateFile?: (fileName: string, base?: string | URL) => string, wasmBinary?: ArrayBuffer): Promise<MxCppType>;
+/** MxCad配置 */
+export interface MxCadConfig {
+	/** 获取加载wasm相关文件(wasm/js/worker.js)路径位置
+	 * @param fileName wasm相关的文件名称
+	 * @param base 相对于js调用位置的http URL绝对路径
+	 * @returns filePath 默认采用base + fileName
+	 * @abstract 本质上locateFile配置函数就是返回wasm相关文件在自己的服务器上的位置
+	 *           在npm包中\`node_modules/mxcad/dist/wasm/2d/\`下的文件就是支持2d的相关wasm文件
+	 * @example
+	 * \`\`\`js
+	 * // 在vite中只需要如下代码:
+	 * locateFile(fileName) { return new URL("/node_modules/mxcad/dist/wasm/2d/\${fileName}", import.meta.url).href}
+	 * \`\`\`
+	 */
+	locateFile?: (fileName: string, base?: string | URL) => string;
+	/**  WebAssembly 模块二进制文件 默认情况无需配置 **/
+	wasmBinary?: ArrayBuffer;
+	/**
+	 * 当通过 MxFun.getCurrentDraw 未发现当前mxDraw实例时，
+	 * 会通过 canvas属性(值可以是css选择器字符串也可以是一个canvas元素)来创建mxdraw实例
+	 * 如果想要获得这个mxDraw实例 只需要调用mxdraw包中导出的 MxFun.getCurrentDraw方法即可
+	 *   */
+	canvas?: string | HTMLCanvasElement;
+	/** 用户身份标识 */
+	userIdentitySign?: string;
+	/**
+	 * mxdraw和mxcad 核心代码加载完成初始化的回调
+	 * onInit默认值函数如下实例所示（请根据你的业务需求自行修改）
+	 * @example
+	 * \`\`\`js
+	 * import { MxFun } from "mxdraw"
+	 * onInit() {
+	 *  MxFun.setIniset({
+	 *       // 启用对象选择功能.
+	 *      EnableIntelliSelect: true,
+	 *       // 选择类型
+	 *      IntelliSelectType: 1,
+	 *       // 是否开启多个选择
+	 *      multipleSelect: false,
+	 *   });
+	 * }
+	 * \`\`\`
+	 * */
+	onInit?: Function;
+	/** 需要初始化打开的文件url路径 */
+	fileUrl?: string;
+	/** 监听打开文件成功回调事件 */
+	onOpenFileComplete?: Function;
+}
+/** 创建MxCad示例 */
+export declare const createMxCad: (config?: MxCadConfig) => Promise<McObject>;
+/** CAD系统变量基础类 **/
+export declare class SysVar {
+	protected _mxobj: McObject;
+	constructor();
+}
+/** 系统变量整数类型的布尔值表示方式 */
+export declare enum Status {
+	/** 关闭 false */
+	Off = 0,
+	/** 开启 true */
+	On = 1
+}
+/** CAD 整数类型系统变量 **/
+export declare class SysVarLong<T extends Record<string, T[keyof T]>> extends SysVar {
+	/** 设置系统变量(整数类型) */
+	set<K extends keyof T>(key: K, val: T[K]): boolean;
+	/** 获取系统变量 */
+	get<K extends keyof T>(key: K): T[K];
+}
+/** 点样式的系统变量属性类型 */
+export type PointDotStyleSysVarLongProps = {
+	/** 点模式 */
+	"PDMODE": (typeof PointDotStyleSysVarLong)["modeValues"][number];
+	/** 点大小 */
+	"PDSIZE": number;
+};
+/** 点样式系统变量 **/
+export declare class PointDotStyleSysVarLong extends SysVarLong<PointDotStyleSysVarLongProps> {
+	/** PDMODE 的可选值 列表 */
+	static modeValues: readonly [
+		0,
+		1,
+		2,
+		3,
+		4,
+		32,
+		33,
+		34,
+		35,
+		36,
+		64,
+		65,
+		66,
+		67,
+		68,
+		96,
+		97,
+		98,
+		99,
+		100
+	];
+	/** 切换PDMODE的值
+	 * @param 切换的索引 根据 PointDotStyleSysVarLong.modeValues 可选列表实现
+	*/
+	switchPDMODE(index: number): void;
+}
+/** 草图设置的变量名称 */
+export declare enum SysVarLongSketchSettings {
+	/** 栅格 */
+	"GRIDMODE" = 0,
+	/** 正交 */
+	"ORTHOMODE" = 1,
+	/** 极轴 */
+	"AUTOSNAP" = 2,
+	/** 对象捕捉 */
+	"OSMODE" = 3,
+	/** 对象追踪 */
+	"DYNTRACE" = 4,
+	/** DIY */
+	"DYNINPUT" = 5,
+	/** 线宽 */
+	"LWDISPLAY" = 6
+}
+/** 符合草图设置Status整数表示布尔值的变量名称 */
+export type SysVarLongSketchSettingsKeys = keyof Omit<typeof SysVarLongSketchSettings, "OSMODE">;
+/** 草图设置的系统变量属性 */
+export type SketchSettingsSysVarLongProps = {
+	[key in SysVarLongSketchSettingsKeys]: Status;
+} & {
+	OSMODE: number;
+};
+/*** 草图系统变量 */
+export declare class SketchSettingsSysVarLong extends SysVarLong<SketchSettingsSysVarLongProps> {
+	osMode: SketchSettingsOsModeSysVarLong;
+	constructor();
+	/***
+	 * 切换Status只支持0和1的系统变量
+	 * @param key 设置支持切换的属性
+	 *  */
+	switch(key: SysVarLongSketchSettingsKeys): boolean;
+	/** 获取支持Status 0和1环境变量的值返回布尔值 */
+	getBoolean(key: SysVarLongSketchSettingsKeys): boolean;
+	/** 设置支持Status 0和1 的环境变量的值 通过布尔值设置 */
+	setBoolean(key: SysVarLongSketchSettingsKeys, val: boolean): boolean;
+	/** 获取 草图设置模式的系统变量 */
+	getOsMode(): SketchSettingsOsModeSysVarLong;
+}
+/** 草图设置模式的系统变量运算类型 */
+export declare enum SysVarLongSketchSettingsOsMode {
+	/** 端点捕捉 */
+	End = 1,
+	/** 中点捕捉 */
+	Mid = 2,
+	/** 圆心点捕捉 */
+	Cen = 4,
+	/** 节点捕捉 */
+	Node = 8,
+	/** 象限点捕捉 */
+	Quad = 16,
+	/** 交点捕捉 */
+	Int = 32,
+	/** 插入点捕捉 */
+	Ins = 64,
+	/** 垂足点捕捉 */
+	Perp = 128,
+	/** 切点捕捉 */
+	Tan = 256,
+	/** 最近点捕捉 */
+	Near = 512,
+	/**外观交点捕捉*/
+	App = 2048,
+	/**延伸点捕捉*/
+	Ext = 4096,
+	/** 平行点捕捉 */
+	Par = 8192,
+	/**捕捉关闭 */
+	Off = 16384
+}
+/** 草图设置模式的系统变量运算类型名称 **/
+export type SysVarLongSketchSettingsOsModeKeys = keyof typeof SysVarLongSketchSettingsOsMode;
+export type SysVarLongSketchSettingsOsModeKey = SysVarLongSketchSettingsOsModeKeys | SysVarLongSketchSettingsOsMode;
+/** 草图设置模式的系统变量  **/
+export declare class SketchSettingsOsModeSysVarLong extends SysVar {
+	protected _osModeValue: number | undefined;
+	constructor();
+	protected getKey(key: SysVarLongSketchSettingsOsModeKey): SysVarLongSketchSettingsOsMode;
+	protected getOsMode(): number;
+	/***
+	 * 设置草图设置的各种状态
+	 * @param key {SysVarLongSketchSettingsOsMode} 运算状态类型名称或其运算值
+	 * @param is 状态值
+	 * @example
+	 * \`\`\`
+	 * const osMode = new OsModeSysVarLong()
+	 * osMode.set("Off", true).set("Cen", true).set("Near", false).save()
+	 * \`\`\`
+	 * */
+	set(key: SysVarLongSketchSettingsOsModeKey, is: boolean): this;
+	/***
+	 * 获取草图设置的各种状态
+	 * */
+	get(key?: SysVarLongSketchSettingsOsModeKey): boolean;
+	/** 保存已经设置了的各种状态到系统变量SysVarLongSketchSettings.OSMODE上 */
+	save(): void;
+	/** 统一设置所有的系统变量模式 **/
+	setAll(is: boolean): void;
+	/** 获取SysVarLongSketchSettings.OSMODE变量下的所有状态所有状态 */
+	getAll(): {
+		End: boolean;
+		Mid: boolean;
+		Cen: boolean;
+		Node: boolean;
+		Quad: boolean;
+		Int: boolean;
+		Ins: boolean;
+		Perp: boolean;
+		Tan: boolean;
+		Near: boolean;
+		App: boolean;
+		Ext: boolean;
+		Par: boolean;
+		Off: boolean;
+	};
+}
+/** 初始化系统变量 */
+export declare const initSysVar: () => {
+	pointDotStyle: PointDotStyleSysVarLong;
+	sketchSettings: SketchSettingsSysVarLong;
+};
+/** 获取cad系统变量 */
+export declare const getSysVar: () => {
+	pointDotStyle: PointDotStyleSysVarLong;
+	sketchSettings: SketchSettingsSysVarLong;
+};
 declare const getWasmURL: (wasmURL: string, baseURL?: string | URL) => string;
 /** wasm importObject 的可配置选项 */
 export interface WasmConfig {
@@ -10001,12 +10233,10 @@ export interface MxDraw3d extends WasmConfig {
 	 */
 	open3DFile: (file: File) => void;
 }
-export declare let MxCpp: MxCppType;
-export declare function loadMxCADassembly(call: (MxCpp: MxCppType) => void, locateFile?: (wasmURL: string, _?: string | URL) => string, wasmBinary?: ArrayBuffer): Promise<void>;
 export declare function loadMxCADassembly3d(config: MxDraw3dConfig, call?: (mxDraw3d: MxDraw3d) => void): Promise<MxDraw3d>;
 
 export {};
-`;let g=!0;const Q={...m,enhanceApp(e){const{app:r}=e;m.enhanceApp(e),r.mixin({async mounted(){g&&(g=!1,await i(()=>import("./chunks/mxdraw.es.309bc154.js"),[]).then(n=>{x("mxdraw",n.default||n)}),await i(()=>import("./chunks/index.e6fd968e.js").then(n=>n.i),["assets/chunks/index.e6fd968e.js","assets/chunks/framework.b34656dc.js","assets/chunks/commonjsHelpers.725317a4.js"]).then(n=>{x("mxcad",n.default||n)}))}}),r.use($,{defaultDirection:"column",ms:300,handleError(n){},onMonacoCreated(n){n.languages.typescript.typescriptDefaults.addExtraLib(`
+`;let g=!0;const Q={...m,enhanceApp(e){const{app:r}=e;m.enhanceApp(e),r.mixin({async mounted(){g&&(g=!1,await a(()=>import("./chunks/mxdraw.es.309bc154.js"),[]).then(n=>{x("mxdraw",n.default||n)}),await a(()=>import("./chunks/index.e6fd968e.js").then(n=>n.i),["assets/chunks/index.e6fd968e.js","assets/chunks/framework.b34656dc.js","assets/chunks/commonjsHelpers.725317a4.js"]).then(n=>{x("mxcad",n.default||n)}))}}),r.use($,{defaultDirection:"column",ms:300,handleError(n){},onMonacoCreated(n){n.languages.typescript.typescriptDefaults.addExtraLib(`
           declare module 'mxdraw' { 
             ${q} 
           }
@@ -10014,4 +10244,4 @@ export {};
           declare module 'mxcad' { 
             ${Z} 
           }
-          `,"mxcad")}})}};function M(e){if(e.extends){const r=M(e.extends);return{...r,...e,async enhanceApp(n){r.enhanceApp&&await r.enhanceApp(n),e.enhanceApp&&await e.enhanceApp(n)}}}return e}const a=M(Q),ee=H({name:"VitePressApp",setup(){const{site:e}=O();return V(()=>{N(()=>{document.documentElement.lang=e.value.lang,document.documentElement.dir=e.value.dir})}),L(),I(),k(),a.setup&&a.setup(),()=>_(a.Layout)}});async function re(){const e=te(),r=ne();r.provide(T,e);const n=v(e.route);return r.provide(D,n),r.component("Content",C),r.component("ClientOnly",R),Object.defineProperties(r.config.globalProperties,{$frontmatter:{get(){return n.frontmatter.value}},$params:{get(){return n.page.value.params}}}),a.enhanceApp&&await a.enhanceApp({app:r,router:e,siteData:w}),{app:r,router:e,data:n}}function ne(){return P(ee)}function te(){let e=l,r;return S(n=>{let t=A(n);return e&&(r=t),(e||r===t)&&(t=t.replace(/\.js$/,".lean.js")),l&&(e=!1),i(()=>import(t),[])},a.NotFound)}l&&re().then(({app:e,router:r,data:n})=>{r.go().then(()=>{f(r.route,n.site),e.mount("#app")})});export{ae as A,se as O,le as P,de as R,re as createApp,X as v};
+          `,"mxcad")}})}};function M(e){if(e.extends){const r=M(e.extends);return{...r,...e,async enhanceApp(n){r.enhanceApp&&await r.enhanceApp(n),e.enhanceApp&&await e.enhanceApp(n)}}}return e}const i=M(Q),ee=H({name:"VitePressApp",setup(){const{site:e}=O();return V(()=>{N(()=>{document.documentElement.lang=e.value.lang,document.documentElement.dir=e.value.dir})}),L(),I(),k(),i.setup&&i.setup(),()=>_(i.Layout)}});async function re(){const e=te(),r=ne();r.provide(T,e);const n=v(e.route);return r.provide(D,n),r.component("Content",C),r.component("ClientOnly",R),Object.defineProperties(r.config.globalProperties,{$frontmatter:{get(){return n.frontmatter.value}},$params:{get(){return n.page.value.params}}}),i.enhanceApp&&await i.enhanceApp({app:r,router:e,siteData:w}),{app:r,router:e,data:n}}function ne(){return P(ee)}function te(){let e=l,r;return S(n=>{let t=A(n);return e&&(r=t),(e||r===t)&&(t=t.replace(/\.js$/,".lean.js")),l&&(e=!1),a(()=>import(t),[])},i.NotFound)}l&&re().then(({app:e,router:r,data:n})=>{r.go().then(()=>{f(r.route,n.site),e.mount("#app")})});export{ie as A,se as O,le as P,de as R,re as createApp,Y as v};
