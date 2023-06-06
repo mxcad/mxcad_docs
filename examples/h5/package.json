@@ -1,0 +1,12 @@
+{
+  "name": "mxcad-h5",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node index.js",
+    "build": ""
+  },
+  "author": "",
+  "license": "ISC"
+}

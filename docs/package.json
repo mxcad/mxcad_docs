@@ -1,0 +1,6 @@
+{
+    "scripts": {
+        "dev": "node typedoc.js && vitepress dev",
+        "build": "node typedoc.js && vitepress build"
+    }
+}

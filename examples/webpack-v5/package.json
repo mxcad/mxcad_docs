@@ -1,0 +1,22 @@
+{
+  "name": "v5",
+  "version": "1.0.0",
+  "description": "use mxcad webapck v5",
+  "private": true,
+  "scripts": {
+    "dev": "webpack serve",
+    "build": "webpack --mode=production"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "html-webpack-plugin": "^5.5.1",
+    "webpack": "5.83.1",
+    "webpack-cli": "5.1.1",
+    "copy-webpack-plugin": "5"
+  },
+  "dependencies": {
+    "mxcad": "latest",
+    "mxdraw": "latest"
+  }
+}
