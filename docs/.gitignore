@@ -1,0 +1,8 @@
+node_modules
+dist
+<<<<<<< HEAD
+!README.md
+=======
+!README.md
+__old
+>>>>>>> 8c441820 (init)
