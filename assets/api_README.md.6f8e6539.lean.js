@@ -1,0 +1,1 @@
+import{_ as a,o as e,c as t,V as o}from"./chunks/framework.24f0af87.js";const f=JSON.parse('{"title":"mxcad API 文档","description":"","frontmatter":{},"headers":[],"relativePath":"api/README.md","filePath":"api/README.md"}'),l={name:"api/README.md"},d=o("",5),s=[d];function c(r,i,n,m,h,_){return e(),t("div",null,s)}const p=a(l,[["render",c]]);export{f as __pageData,p as default};

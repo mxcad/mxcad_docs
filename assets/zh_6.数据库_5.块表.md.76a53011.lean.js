@@ -1,0 +1,1 @@
+import{_ as s,o as a,c as n,V as l}from"./chunks/framework.24f0af87.js";const i=JSON.parse('{"title":"块表","description":"","frontmatter":{},"headers":[],"relativePath":"zh/6.数据库/5.块表.md","filePath":"zh/6.数据库/5.块表.md"}'),p={name:"zh/6.数据库/5.块表.md"},o=l("",19),e=[o];function t(c,r,D,y,F,A){return a(),n("div",null,e)}const b=s(p,[["render",t]]);export{i as __pageData,b as default};
