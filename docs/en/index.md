@@ -11,11 +11,7 @@ hero:
   actions:
     - theme: default
       text: quick get start
-<<<<<<< HEAD
-      link: /en/1.指南/1.快速入门.md
-=======
-      link: /en/1.指南/1.开始.md
->>>>>>> 8c441820 (init)
+      link: /en/1.开始/1.简介.md
     - theme: default
       text: API document
       link: /api/README

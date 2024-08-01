@@ -31,8 +31,8 @@ function deleteFolderRecursive(path) {
 // 主函数
 async function main(entries = [
     rootPath('src/export2d.ts'),
-    rootPath('src/export3d.ts'),
-    rootPath('src/export.ts'),
+    rootPath('src/exportTool.ts'),
+    rootPath('src/exportMap.ts'),
 ], isDeleteFolderRecursive = false) {
     // 初始化 TypeDoc
     const app = new TypeDoc.Application();
@@ -55,14 +55,17 @@ async function main(entries = [
 
     // 指定 TypeDoc 配置项
     app.bootstrap({
-        name: "mxcad API 文档",
+        name: "mxcad_2d API 文档",
         entryPoints: entries,
         tsconfig: rootPath('tsconfig.json'),
         plugin: ['typedoc-plugin-markdown', 'typedoc-plugin-missing-exports'],
         readme: 'none',
         theme: 'markdown',
         disableSources: true,
-        cleanOutputDir: isDeleteFolderRecursive
+        cleanOutputDir: isDeleteFolderRecursive,
+        excludePrivate:true,
+        excludeProtected:true,
+        excludeInternal: true
     });
     const project = app.convert();
 
@@ -74,5 +77,5 @@ async function main(entries = [
     
 }
 
-main([rootPath('src/export.ts')], true)
+main([],true)
 .then(()=> main()).catch(console.error);

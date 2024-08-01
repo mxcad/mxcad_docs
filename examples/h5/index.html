@@ -11,13 +11,13 @@
     <script src="https://unpkg.com/mxcad" crossorigin="anonymous"></script>
     <script>
         const { MxFun, loadCoreCode } = Mx
-        const { createMxCad } = mxcad
+        const { createMxCad } = MxCAD
         window.onload = function() {
             createMxCad({
                 canvas: "#myCanvas",
                 locateFile: (fileName)=> "https://unpkg.com/mxcad/dist/wasm/2d-st/" + fileName,
                 fontspath: "https://unpkg.com/mxcad/dist/fonts/",
-                fileUrl: "/test2.mxweb"
+                fileUrl: "../public/test2.mxweb"
             })
         }
     </script>

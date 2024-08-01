@@ -10,11 +10,7 @@ hero:
   actions:
     - theme: default
       text: 快速入门
-<<<<<<< HEAD
-      link: /zh/1.指南/1.快速入门
-=======
       link: /zh/1.开始/1.简介
->>>>>>> 8c441820 (init)
     - theme: default
       text: API 文档
       link: /api/README

@@ -18,7 +18,7 @@ export const enConfig: LocaleSpecificConfig<DefaultTheme.Config> = {
                     link: "https://www.mxdraw3d.com/"
                 }
             ]},
-            { text: 'guide', link: '/en/指南/1.quickGetStart' },
+            { text: 'guide', link: '/en/1.开始/1.简介.md' },
             { text: 'API document', link: '/api/README' },
             { text: "mxdraw document", items: [{
                 text: "github",

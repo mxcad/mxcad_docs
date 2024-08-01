@@ -15,11 +15,7 @@ export const zhConfig: LocaleSpecificConfig<DefaultTheme.Config> = {
                     link: "https://www.mxdraw3d.com/"
                 }
             ]},
-<<<<<<< HEAD
-            { text: '指南', link: '/zh/1.指南/1.快速入门' },
-=======
             { text: '指南', link: '/zh/1.开始/1.简介' },
->>>>>>> 8c441820 (init)
             { text: 'API文档', link: '/api/README' },
             { text: "mxdraw文档", items: [{
                 text: "github",
@@ -27,6 +23,9 @@ export const zhConfig: LocaleSpecificConfig<DefaultTheme.Config> = {
             },{
                 text: "gitee",
                 link: "https://mxcadx.gitee.io/mxdraw_docs"
+            },{
+                text: "官网",
+                link: "https://www.mxdraw3d.com/mxdraw_docs" 
             }] }
         ],
     }

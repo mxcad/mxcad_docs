@@ -6,33 +6,58 @@ import { enConfig } from './en';
 import { zhConfig } from './zh';
 
 enum EnZhDict {
-<<<<<<< HEAD
-    "指南" = "guide",
-    "快速入门" = "quick get start",
-    "图形转换" = "Graphical Conversion",
-    "打开和保存图纸" = "Open and save sheets",
-    "参数化交互绘图" = "Parametric interactive drawing",
-    "数据库" = "Database",
-    "系统变量" = "System variable",
-    "示例项目二次开发"="Example Project for Secondary Development",
-    "常见问题" = "frequently asked question",
-=======
-    "开始" = "satrt" ,
-    "简介" = "brief introduction",
-    "快速入门" = "quick get start",
-    "图纸转换" = "drawing conversion",
-    "指南" = "guide",
-    "绘图" = "draw"
-    // "打开和保存图纸" = "Open and save sheets",
-    // "参数化交互绘图" = "Parametric interactive drawing",
-    // "数据库" = "Database",
-    // "系统变量" = "System variable",
-    // "示例项目二次开发"="Example Project for Secondary Development",
-    // "常见问题" = "frequently asked question",
-    // "基础" = "base",
-    // "选择图形编辑" =  "Select drawing Editing",
-    // "数学库" = "Mathematics library",
->>>>>>> 8c441820 (init)
+    "开始" = "Satrt" ,
+    "简介" = "Brief introduction",
+    "快速入门" = "Quick get start",
+    "图纸转换" = "Drawing conversion",
+    "打开和保存图纸" = "Open and save the drawing",
+    "指南" = "Guide",
+    "数学库" = "Mathematical library",
+    "基础绘图" = "Basic drawing",
+    "点" = "Point",
+    "直线" = "Straight line",
+    "多段线" = "Polyline",
+    "圆" = "Circle",
+    "圆弧" = "Arc",
+    "椭圆" = "Ellipse",
+    "尺寸标注" = "Dimension marking",
+    "文字" = "Text",
+    "自定义实体" = "Custom entity",
+    "填充" = "Fill in",
+    "路径" = "Path",
+    "图块" = "Block",
+    "图片" = "Image",
+    "交互绘图" = "Interactive drawing",
+    "命令行" = "Command line",
+    "UI交互" = "UI interaction",
+    "动态绘制" = "Dynamic rendering",
+    "图纸编辑" = "Drawing editing",
+    "选择图形" = "Select pattern",
+    "常用编辑操作" = "Common edit operation",
+    "视区设置" = "View-area setting",
+    "数据库" = "Archive" ,
+    "系统变量" = "System variable" ,
+    "图层表" = "Layer table" ,
+    "文字样式表" = "Literal style sheet" ,
+    "线型表" = "Line table" ,
+    "块表" = "Block table" ,
+    "全局字典" = "Global dictionary" ,
+    "实体" = "Entity" ,
+    "最佳实践" = "Best practice" ,
+    "MxCAD APP应用集成" = "MxCAD APP application integration" ,
+    "打包桌面MxCAD APP" = "Package desktop MxCAD APP" ,
+    "mapbox与cad图纸结合" = "mapbox combined with cad drawings" ,
+    "常见问题" = "Q&A",
+    "概述" = "Summarize",
+    "事件监听" = "EventListeners"
+} 
+
+enum apiZhDict {
+    "modules" = "模块" ,
+    "README" = "API文档首页",
+    "interfaces" = "接口",
+    "enums" = "枚举",
+    "classes" = "类",
 }
 
 const getEnMap = (sidebarItem: DefaultTheme.SidebarItem)=> {
@@ -42,14 +67,20 @@ const getEnMap = (sidebarItem: DefaultTheme.SidebarItem)=> {
     }
     return sidebarItem
 } 
+const getZhApi = (sidebarItem: DefaultTheme.SidebarItem)=> {
+    if(sidebarItem.text && apiZhDict[sidebarItem.text]) sidebarItem.text = apiZhDict[sidebarItem.text]
+    if(sidebarItem.items) {
+        sidebarItem.items = sidebarItem.items.map(getZhApi)
+    }
+    return sidebarItem
+} 
 const autoSidebar:any = AutoSidebar({
-<<<<<<< HEAD
-    deletePrefix: /^(\d\.|index)/, ignoreList: ["assets", "public"], sideBarResolved(data) {
-=======
     deletePrefix: /^(\d+\.|index)/, ignoreList: ["assets", "public"], sideBarResolved(data) {
->>>>>>> 8c441820 (init)
         data["/en/"] = data["/en/"].map((items)=> {
            return getEnMap(items)
+        })
+        data["/api/"] = data["/api/"].map((items)=> {
+           return getZhApi(items)
         })
         return data
     }
