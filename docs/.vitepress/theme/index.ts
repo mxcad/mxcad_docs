@@ -16,7 +16,10 @@ export default {
   enhanceApp(ctx) {
     const { app } = ctx
     DefaultTheme.enhanceApp(ctx)
+<<<<<<< HEAD
+=======
     console.log(112)
+>>>>>>> 336a3932e80ac24ad804265e40f4ad4d62d3927c
     // app.config.unwrapInjectedRef has been deprecated. 3.3 now alawys unwraps injected refs in Options API.
     app.mixin({
       async mounted() {
@@ -30,7 +33,10 @@ export default {
         //  @ts-ignore
      
         await import("../../../src/index.ts").then((mxcad) => {
+<<<<<<< HEAD
+=======
          
+>>>>>>> 336a3932e80ac24ad804265e40f4ad4d62d3927c
           addImportMap("mxcad", mxcad.default || mxcad);
         });
       },

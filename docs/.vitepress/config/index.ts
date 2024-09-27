@@ -49,7 +49,42 @@ enum EnZhDict {
     "mapbox与cad图纸结合" = "mapbox combined with cad drawings" ,
     "常见问题" = "Q&A",
     "概述" = "Summarize",
+<<<<<<< HEAD
+    "事件监听" = "EventListeners",
+    "功能示例demo"="Function Example demo",
+    "标注测量"="Labeling measurement",
+    "绘图工具"="Drawing tool",
+    "编辑工具"="Editing tool",
+    "测量圆"="Measuring circle",
+    "测量面积（多边形、矩形）"="Measuring area (polygon, rectangle)",
+    "点到直线距离"="The distance from a point to a line",
+    "弧长"="Arc length",
+    "连续测量"="Continuous measurement",
+    "局部放大"="Local amplification",
+    "测量坐标"="Measuring coordinate",
+    "中心矩形"="Central rectangle",
+    "星形"="star",
+    "保温棉"="Thermal insulation cotton",
+    "矩形缩放"="Rectangular scaling",
+    "临时隐藏"="Temporary Hide",
+    "打断"="Interrupt",
+    "移动"="Move",
+    "缩放"="Zoom",
+    "镜像"="Mirror image",
+    "旋转"="Rotate",
+    "文字工具"="Type tool",
+    "文字加框"="Text framing",
+    "提取文字"="Extract text",
+    "其他" = "Other",
+    "偏移" = "Skew",
+    "导出jpg" = "Export JPG",
+    "导出pdf" = "Export PDF",
+    "指定范围输出dwg" = "Specify range output DWG",
+    "文字查找" = "Text search",
+    "测量角度" = "Measuring Angle",
+=======
     "事件监听" = "EventListeners"
+>>>>>>> 336a3932e80ac24ad804265e40f4ad4d62d3927c
 } 
 
 enum apiZhDict {
@@ -93,7 +128,10 @@ export default defineConfig({
         define: {
             "process.env.BABEL_TYPES_8_BREAKING": "false",
             "process.platform": '"darwin"',
+<<<<<<< HEAD
+=======
             "Buffer.isBuffer": "undefined",
+>>>>>>> 336a3932e80ac24ad804265e40f4ad4d62d3927c
         },
         resolve: {
             alias: {

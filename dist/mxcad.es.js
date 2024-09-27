@@ -1,5 +1,11 @@
 import { MxFun, DetailedResult, MrxDbgUiPrPoint, MrxDbgUiPrDist, MrxDbgUiPrAngle, MrxDbgUiPrInt, MrxDbgUiPrKeyWord, MrxDbgUiPrString, DynamicInputType, MxCursorType, MrxDbgUtils, MxDrawObject, store, loadCoreCode, MrxDbgUiPrBaseReturn } from 'mxdraw';
 
+<<<<<<< HEAD
+function _classCallCheck$1(instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError("Cannot call a class as a function");
+  }
+=======
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {
   try {
     var info = gen[key](arg);
@@ -29,6 +35,7 @@ function _asyncToGenerator(fn) {
       _next(undefined);
     });
   };
+>>>>>>> 336a3932e80ac24ad804265e40f4ad4d62d3927c
 }
 
 function _typeof$2(o) {
@@ -41,6 +48,8 @@ function _typeof$2(o) {
   }, _typeof$2(o);
 }
 
+<<<<<<< HEAD
+=======
 function getAugmentedNamespace(n) {
   var f = n.default;
 	if (typeof f == "function") {
@@ -673,6 +682,7 @@ function _classCallCheck$1(instance, Constructor) {
   }
 }
 
+>>>>>>> 336a3932e80ac24ad804265e40f4ad4d62d3927c
 function toPrimitive(t, r) {
   if ("object" != _typeof$2(t) || !t) return t;
   var e = t[Symbol.toPrimitive];
@@ -707,6 +717,8 @@ function _createClass$1(Constructor, protoProps, staticProps) {
   return Constructor;
 }
 
+<<<<<<< HEAD
+=======
 function _defineProperty(obj, key, value) {
   key = toPropertyKey(key);
   if (key in obj) {
@@ -724,6 +736,7 @@ function _defineProperty(obj, key, value) {
 
 var lib = {exports: {}};
 
+>>>>>>> 336a3932e80ac24ad804265e40f4ad4d62d3927c
 function _assertThisInitialized$1(self) {
   if (self === void 0) {
     throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
@@ -772,6 +785,30 @@ function _getPrototypeOf$1(o) {
   return _getPrototypeOf$1(o);
 }
 
+<<<<<<< HEAD
+function getAugmentedNamespace(n) {
+  var f = n.default;
+	if (typeof f == "function") {
+		var a = function () {
+			return f.apply(this, arguments);
+		};
+		a.prototype = f.prototype;
+  } else a = {};
+  Object.defineProperty(a, '__esModule', {value: true});
+	Object.keys(n).forEach(function (k) {
+		var d = Object.getOwnPropertyDescriptor(n, k);
+		Object.defineProperty(a, k, d.get ? d : {
+			enumerable: true,
+			get: function () {
+				return n[k];
+			}
+		});
+	});
+	return a;
+}
+
+=======
+>>>>>>> 336a3932e80ac24ad804265e40f4ad4d62d3927c
 var buffer$1 = {};
 
 var base64Js = {};
@@ -2706,6 +2743,703 @@ function _isNativeReflectConstruct$7() { if (typeof Reflect === "undefined" || !
   }
 })(buffer$1);
 
+<<<<<<< HEAD
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {
+  try {
+    var info = gen[key](arg);
+    var value = info.value;
+  } catch (error) {
+    reject(error);
+    return;
+  }
+  if (info.done) {
+    resolve(value);
+  } else {
+    Promise.resolve(value).then(_next, _throw);
+  }
+}
+function _asyncToGenerator(fn) {
+  return function () {
+    var self = this,
+      args = arguments;
+    return new Promise(function (resolve, reject) {
+      var gen = fn.apply(self, args);
+      function _next(value) {
+        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);
+      }
+      function _throw(err) {
+        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);
+      }
+      _next(undefined);
+    });
+  };
+}
+
+var regeneratorRuntime$1 = {exports: {}};
+
+var _typeof$1 = {exports: {}};
+
+(function (module) {
+  function _typeof(o) {
+    "@babel/helpers - typeof";
+
+    return (module.exports = _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) {
+      return typeof o;
+    } : function (o) {
+      return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o;
+    }, module.exports.__esModule = true, module.exports["default"] = module.exports), _typeof(o);
+  }
+  module.exports = _typeof, module.exports.__esModule = true, module.exports["default"] = module.exports;
+})(_typeof$1);
+
+(function (module) {
+  var _typeof = _typeof$1.exports["default"];
+  function _regeneratorRuntime() {
+
+    /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */
+    module.exports = _regeneratorRuntime = function _regeneratorRuntime() {
+      return e;
+    }, module.exports.__esModule = true, module.exports["default"] = module.exports;
+    var t,
+      e = {},
+      r = Object.prototype,
+      n = r.hasOwnProperty,
+      o = Object.defineProperty || function (t, e, r) {
+        t[e] = r.value;
+      },
+      i = "function" == typeof Symbol ? Symbol : {},
+      a = i.iterator || "@@iterator",
+      c = i.asyncIterator || "@@asyncIterator",
+      u = i.toStringTag || "@@toStringTag";
+    function define(t, e, r) {
+      return Object.defineProperty(t, e, {
+        value: r,
+        enumerable: !0,
+        configurable: !0,
+        writable: !0
+      }), t[e];
+    }
+    try {
+      define({}, "");
+    } catch (t) {
+      define = function define(t, e, r) {
+        return t[e] = r;
+      };
+    }
+    function wrap(t, e, r, n) {
+      var i = e && e.prototype instanceof Generator ? e : Generator,
+        a = Object.create(i.prototype),
+        c = new Context(n || []);
+      return o(a, "_invoke", {
+        value: makeInvokeMethod(t, r, c)
+      }), a;
+    }
+    function tryCatch(t, e, r) {
+      try {
+        return {
+          type: "normal",
+          arg: t.call(e, r)
+        };
+      } catch (t) {
+        return {
+          type: "throw",
+          arg: t
+        };
+      }
+    }
+    e.wrap = wrap;
+    var h = "suspendedStart",
+      l = "suspendedYield",
+      f = "executing",
+      s = "completed",
+      y = {};
+    function Generator() {}
+    function GeneratorFunction() {}
+    function GeneratorFunctionPrototype() {}
+    var p = {};
+    define(p, a, function () {
+      return this;
+    });
+    var d = Object.getPrototypeOf,
+      v = d && d(d(values([])));
+    v && v !== r && n.call(v, a) && (p = v);
+    var g = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(p);
+    function defineIteratorMethods(t) {
+      ["next", "throw", "return"].forEach(function (e) {
+        define(t, e, function (t) {
+          return this._invoke(e, t);
+        });
+      });
+    }
+    function AsyncIterator(t, e) {
+      function invoke(r, o, i, a) {
+        var c = tryCatch(t[r], t, o);
+        if ("throw" !== c.type) {
+          var u = c.arg,
+            h = u.value;
+          return h && "object" == _typeof(h) && n.call(h, "__await") ? e.resolve(h.__await).then(function (t) {
+            invoke("next", t, i, a);
+          }, function (t) {
+            invoke("throw", t, i, a);
+          }) : e.resolve(h).then(function (t) {
+            u.value = t, i(u);
+          }, function (t) {
+            return invoke("throw", t, i, a);
+          });
+        }
+        a(c.arg);
+      }
+      var r;
+      o(this, "_invoke", {
+        value: function value(t, n) {
+          function callInvokeWithMethodAndArg() {
+            return new e(function (e, r) {
+              invoke(t, n, e, r);
+            });
+          }
+          return r = r ? r.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg();
+        }
+      });
+    }
+    function makeInvokeMethod(e, r, n) {
+      var o = h;
+      return function (i, a) {
+        if (o === f) throw new Error("Generator is already running");
+        if (o === s) {
+          if ("throw" === i) throw a;
+          return {
+            value: t,
+            done: !0
+          };
+        }
+        for (n.method = i, n.arg = a;;) {
+          var c = n.delegate;
+          if (c) {
+            var u = maybeInvokeDelegate(c, n);
+            if (u) {
+              if (u === y) continue;
+              return u;
+            }
+          }
+          if ("next" === n.method) n.sent = n._sent = n.arg;else if ("throw" === n.method) {
+            if (o === h) throw o = s, n.arg;
+            n.dispatchException(n.arg);
+          } else "return" === n.method && n.abrupt("return", n.arg);
+          o = f;
+          var p = tryCatch(e, r, n);
+          if ("normal" === p.type) {
+            if (o = n.done ? s : l, p.arg === y) continue;
+            return {
+              value: p.arg,
+              done: n.done
+            };
+          }
+          "throw" === p.type && (o = s, n.method = "throw", n.arg = p.arg);
+        }
+      };
+    }
+    function maybeInvokeDelegate(e, r) {
+      var n = r.method,
+        o = e.iterator[n];
+      if (o === t) return r.delegate = null, "throw" === n && e.iterator["return"] && (r.method = "return", r.arg = t, maybeInvokeDelegate(e, r), "throw" === r.method) || "return" !== n && (r.method = "throw", r.arg = new TypeError("The iterator does not provide a '" + n + "' method")), y;
+      var i = tryCatch(o, e.iterator, r.arg);
+      if ("throw" === i.type) return r.method = "throw", r.arg = i.arg, r.delegate = null, y;
+      var a = i.arg;
+      return a ? a.done ? (r[e.resultName] = a.value, r.next = e.nextLoc, "return" !== r.method && (r.method = "next", r.arg = t), r.delegate = null, y) : a : (r.method = "throw", r.arg = new TypeError("iterator result is not an object"), r.delegate = null, y);
+    }
+    function pushTryEntry(t) {
+      var e = {
+        tryLoc: t[0]
+      };
+      1 in t && (e.catchLoc = t[1]), 2 in t && (e.finallyLoc = t[2], e.afterLoc = t[3]), this.tryEntries.push(e);
+    }
+    function resetTryEntry(t) {
+      var e = t.completion || {};
+      e.type = "normal", delete e.arg, t.completion = e;
+    }
+    function Context(t) {
+      this.tryEntries = [{
+        tryLoc: "root"
+      }], t.forEach(pushTryEntry, this), this.reset(!0);
+    }
+    function values(e) {
+      if (e || "" === e) {
+        var r = e[a];
+        if (r) return r.call(e);
+        if ("function" == typeof e.next) return e;
+        if (!isNaN(e.length)) {
+          var o = -1,
+            i = function next() {
+              for (; ++o < e.length;) if (n.call(e, o)) return next.value = e[o], next.done = !1, next;
+              return next.value = t, next.done = !0, next;
+            };
+          return i.next = i;
+        }
+      }
+      throw new TypeError(_typeof(e) + " is not iterable");
+    }
+    return GeneratorFunction.prototype = GeneratorFunctionPrototype, o(g, "constructor", {
+      value: GeneratorFunctionPrototype,
+      configurable: !0
+    }), o(GeneratorFunctionPrototype, "constructor", {
+      value: GeneratorFunction,
+      configurable: !0
+    }), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, u, "GeneratorFunction"), e.isGeneratorFunction = function (t) {
+      var e = "function" == typeof t && t.constructor;
+      return !!e && (e === GeneratorFunction || "GeneratorFunction" === (e.displayName || e.name));
+    }, e.mark = function (t) {
+      return Object.setPrototypeOf ? Object.setPrototypeOf(t, GeneratorFunctionPrototype) : (t.__proto__ = GeneratorFunctionPrototype, define(t, u, "GeneratorFunction")), t.prototype = Object.create(g), t;
+    }, e.awrap = function (t) {
+      return {
+        __await: t
+      };
+    }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, c, function () {
+      return this;
+    }), e.AsyncIterator = AsyncIterator, e.async = function (t, r, n, o, i) {
+      void 0 === i && (i = Promise);
+      var a = new AsyncIterator(wrap(t, r, n, o), i);
+      return e.isGeneratorFunction(r) ? a : a.next().then(function (t) {
+        return t.done ? t.value : a.next();
+      });
+    }, defineIteratorMethods(g), define(g, u, "Generator"), define(g, a, function () {
+      return this;
+    }), define(g, "toString", function () {
+      return "[object Generator]";
+    }), e.keys = function (t) {
+      var e = Object(t),
+        r = [];
+      for (var n in e) r.push(n);
+      return r.reverse(), function next() {
+        for (; r.length;) {
+          var t = r.pop();
+          if (t in e) return next.value = t, next.done = !1, next;
+        }
+        return next.done = !0, next;
+      };
+    }, e.values = values, Context.prototype = {
+      constructor: Context,
+      reset: function reset(e) {
+        if (this.prev = 0, this.next = 0, this.sent = this._sent = t, this.done = !1, this.delegate = null, this.method = "next", this.arg = t, this.tryEntries.forEach(resetTryEntry), !e) for (var r in this) "t" === r.charAt(0) && n.call(this, r) && !isNaN(+r.slice(1)) && (this[r] = t);
+      },
+      stop: function stop() {
+        this.done = !0;
+        var t = this.tryEntries[0].completion;
+        if ("throw" === t.type) throw t.arg;
+        return this.rval;
+      },
+      dispatchException: function dispatchException(e) {
+        if (this.done) throw e;
+        var r = this;
+        function handle(n, o) {
+          return a.type = "throw", a.arg = e, r.next = n, o && (r.method = "next", r.arg = t), !!o;
+        }
+        for (var o = this.tryEntries.length - 1; o >= 0; --o) {
+          var i = this.tryEntries[o],
+            a = i.completion;
+          if ("root" === i.tryLoc) return handle("end");
+          if (i.tryLoc <= this.prev) {
+            var c = n.call(i, "catchLoc"),
+              u = n.call(i, "finallyLoc");
+            if (c && u) {
+              if (this.prev < i.catchLoc) return handle(i.catchLoc, !0);
+              if (this.prev < i.finallyLoc) return handle(i.finallyLoc);
+            } else if (c) {
+              if (this.prev < i.catchLoc) return handle(i.catchLoc, !0);
+            } else {
+              if (!u) throw new Error("try statement without catch or finally");
+              if (this.prev < i.finallyLoc) return handle(i.finallyLoc);
+            }
+          }
+        }
+      },
+      abrupt: function abrupt(t, e) {
+        for (var r = this.tryEntries.length - 1; r >= 0; --r) {
+          var o = this.tryEntries[r];
+          if (o.tryLoc <= this.prev && n.call(o, "finallyLoc") && this.prev < o.finallyLoc) {
+            var i = o;
+            break;
+          }
+        }
+        i && ("break" === t || "continue" === t) && i.tryLoc <= e && e <= i.finallyLoc && (i = null);
+        var a = i ? i.completion : {};
+        return a.type = t, a.arg = e, i ? (this.method = "next", this.next = i.finallyLoc, y) : this.complete(a);
+      },
+      complete: function complete(t, e) {
+        if ("throw" === t.type) throw t.arg;
+        return "break" === t.type || "continue" === t.type ? this.next = t.arg : "return" === t.type ? (this.rval = this.arg = t.arg, this.method = "return", this.next = "end") : "normal" === t.type && e && (this.next = e), y;
+      },
+      finish: function finish(t) {
+        for (var e = this.tryEntries.length - 1; e >= 0; --e) {
+          var r = this.tryEntries[e];
+          if (r.finallyLoc === t) return this.complete(r.completion, r.afterLoc), resetTryEntry(r), y;
+        }
+      },
+      "catch": function _catch(t) {
+        for (var e = this.tryEntries.length - 1; e >= 0; --e) {
+          var r = this.tryEntries[e];
+          if (r.tryLoc === t) {
+            var n = r.completion;
+            if ("throw" === n.type) {
+              var o = n.arg;
+              resetTryEntry(r);
+            }
+            return o;
+          }
+        }
+        throw new Error("illegal catch attempt");
+      },
+      delegateYield: function delegateYield(e, r, n) {
+        return this.delegate = {
+          iterator: values(e),
+          resultName: r,
+          nextLoc: n
+        }, "next" === this.method && (this.arg = t), y;
+      }
+    }, e;
+  }
+  module.exports = _regeneratorRuntime, module.exports.__esModule = true, module.exports["default"] = module.exports;
+})(regeneratorRuntime$1);
+
+// TODO(Babel 8): Remove this file.
+
+var runtime = regeneratorRuntime$1.exports();
+var regenerator = runtime;
+
+// Copied from https://github.com/facebook/regenerator/blob/main/packages/runtime/runtime.js#L736=
+try {
+  regeneratorRuntime = runtime;
+} catch (accidentalStrictMode) {
+  if ((typeof globalThis === "undefined" ? "undefined" : _typeof$2(globalThis)) === "object") {
+    globalThis.regeneratorRuntime = runtime;
+  } else {
+    Function("r", "regeneratorRuntime = r")(runtime);
+  }
+}
+
+function b64Encode(str) {
+  return btoa(unescape(encodeURIComponent(str)));
+}
+function b64Decode(str) {
+  return decodeURIComponent(escape(atob(str)));
+}
+function saveAsFileDialog(_x) {
+  return _saveAsFileDialog.apply(this, arguments);
+}
+function _saveAsFileDialog() {
+  _saveAsFileDialog = _asyncToGenerator( /*#__PURE__*/regenerator.mark(function _callee3(_ref) {
+    var blob, _ref$filename, filename, _ref$types, types, _window$navigator2, _window$navigator, _window$navigator$use, handle, writable, link;
+    return regenerator.wrap(function _callee3$(_context3) {
+      while (1) switch (_context3.prev = _context3.next) {
+        case 0:
+          blob = _ref.blob, _ref$filename = _ref.filename, filename = _ref$filename === void 0 ? "" : _ref$filename, _ref$types = _ref.types, types = _ref$types === void 0 ? [{
+            description: "mxweb File",
+            accept: {
+              "application/octet-stream": [".mxweb"]
+            }
+          }] : _ref$types;
+          _context3.prev = 1;
+          if (!window.showSaveFilePicker) {
+            _context3.next = 28;
+            break;
+          }
+          if (!((_window$navigator = window.navigator) !== null && _window$navigator !== void 0 && (_window$navigator$use = _window$navigator.userActivation) !== null && _window$navigator$use !== void 0 && _window$navigator$use.isActive)) {
+            _context3.next = 27;
+            break;
+          }
+          _context3.prev = 4;
+          if (window.showSaveFilePicker) {
+            _context3.next = 7;
+            break;
+          }
+          return _context3.abrupt("return");
+        case 7:
+          _context3.next = 9;
+          return window.showSaveFilePicker({
+            suggestedName: filename,
+            types: types
+          });
+        case 9:
+          handle = _context3.sent;
+          _context3.next = 12;
+          return handle.createWritable();
+        case 12:
+          writable = _context3.sent;
+          _context3.next = 15;
+          return writable.write(blob);
+        case 15:
+          _context3.next = 17;
+          return writable.close();
+        case 17:
+          return _context3.abrupt("return", handle);
+        case 20:
+          _context3.prev = 20;
+          _context3.t0 = _context3["catch"](4);
+          if (!((_context3.t0 === null || _context3.t0 === void 0 ? void 0 : _context3.t0.name) === "AbortError")) {
+            _context3.next = 24;
+            break;
+          }
+          return _context3.abrupt("return");
+        case 24:
+          console.error(_context3.t0);
+        case 25:
+          _context3.next = 28;
+          break;
+        case 27:
+          console.warn("\u975E\u7528\u6237\u4EA4\u4E92 \u65E0\u6CD5\u8C03\u7528showSaveFilePicker \u5DF2\u9009\u62E9\u517C\u5BB9\u65B9\u6848");
+        case 28:
+          if (!((_window$navigator2 = window.navigator) !== null && _window$navigator2 !== void 0 && _window$navigator2.msSaveOrOpenBlob)) {
+            _context3.next = 31;
+            break;
+          }
+          window.navigator.msSaveOrOpenBlob(blob, filename);
+          return _context3.abrupt("return");
+        case 31:
+          link = document.createElement("a");
+          link.href = window.URL.createObjectURL(blob);
+          link.download = filename;
+          link.style.display = "none";
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+          if (typeof window.URL.revokeObjectURL === "function") {
+            window.URL.revokeObjectURL(link.href);
+          } else if (typeof window.webkitURL !== "undefined" && typeof window.webkitURL.revokeObjectURL === "function") {
+            window.webkitURL.revokeObjectURL(link.href);
+          } else {
+            window.URL.revokeObjectURL(link.href);
+          }
+          _context3.next = 44;
+          break;
+        case 41:
+          _context3.prev = 41;
+          _context3.t1 = _context3["catch"](1);
+          console.error(_context3.t1.name, _context3.t1.message);
+        case 44:
+        case "end":
+          return _context3.stop();
+      }
+    }, _callee3, null, [[1, 41], [4, 20]]);
+  }));
+  return _saveAsFileDialog.apply(this, arguments);
+}
+function downloadFile(blob, filename) {
+  var link = document.createElement("a");
+  link.href = window.URL.createObjectURL(blob);
+  link.download = filename;
+  link.click();
+}
+function downloadFileFromUrl(url, filename) {
+  fetch(url).then(function (response) {
+    return response.blob();
+  }).then(function (blob) {
+    var link = document.createElement("a");
+    link.href = window.URL.createObjectURL(blob);
+    link.download = filename;
+    link.click();
+  });
+}
+var getJsonFromUrl = /*#__PURE__*/function () {
+  var _ref2 = _asyncToGenerator( /*#__PURE__*/regenerator.mark(function _callee(url) {
+    return regenerator.wrap(function _callee$(_context) {
+      while (1) switch (_context.prev = _context.next) {
+        case 0:
+          _context.prev = 0;
+          _context.next = 3;
+          return fetch(url);
+        case 3:
+          _context.next = 5;
+          return _context.sent.json();
+        case 5:
+          return _context.abrupt("return", _context.sent);
+        case 8:
+          _context.prev = 8;
+          _context.t0 = _context["catch"](0);
+          console.error("MxTip:error getJsonFromurl:" + url);
+        case 11:
+        case "end":
+          return _context.stop();
+      }
+    }, _callee, null, [[0, 8]]);
+  }));
+  return function getJsonFromUrl(_x2) {
+    return _ref2.apply(this, arguments);
+  };
+}();
+var getFileFromUrl = /*#__PURE__*/function () {
+  var _ref3 = _asyncToGenerator( /*#__PURE__*/regenerator.mark(function _callee2(url) {
+    return regenerator.wrap(function _callee2$(_context2) {
+      while (1) switch (_context2.prev = _context2.next) {
+        case 0:
+          _context2.prev = 0;
+          _context2.next = 3;
+          return fetch(url);
+        case 3:
+          return _context2.abrupt("return", _context2.sent);
+        case 6:
+          _context2.prev = 6;
+          _context2.t0 = _context2["catch"](0);
+          console.error("MxTip:error getFileFromUrl:" + url);
+        case 9:
+        case "end":
+          return _context2.stop();
+      }
+    }, _callee2, null, [[0, 6]]);
+  }));
+  return function getFileFromUrl(_x3) {
+    return _ref3.apply(this, arguments);
+  };
+}();
+function _ML_String(strId, str) {
+  return MxFun.getLanguageString(strId, str);
+}
+function IsZero(val) {
+  return Math.abs(val) < 1e-7;
+}
+function postMemoryFile(memoryData, url, filename, retCall, param) {
+  try {
+    var formData = new FormData();
+    var blob = new Blob([memoryData], {
+      type: "application/octet-stream"
+    });
+    formData.append("file", new File([blob], filename));
+    if (param) formData.append("param", param);
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", url);
+    xhr.send(formData);
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState === XMLHttpRequest.DONE) {
+        if (xhr.status === 200) {
+          retCall(0, xhr.responseText);
+        } else {
+          console.log(xhr.responseText);
+          retCall(4, "server error");
+        }
+      }
+    };
+  } catch (error) {
+    retCall(-1, "catch error");
+  }
+}
+function postEmscriptenIndexedDBFile(filekey, url, retCall, param) {
+  var request = window.indexedDB.open("emscripten_filesystem", 1);
+  request.onerror = function () {
+    retCall(1, "open emscripten_filesystem failed");
+  };
+  request.onsuccess = function (event) {
+    try {
+      if (event.target != null) {
+        var db = event.target.result;
+        var transaction = db.transaction("FILES", "readonly");
+        var objectStore = transaction.objectStore("FILES");
+        var request2 = objectStore.get(filekey);
+        request2.onerror = function () {
+          retCall(3, "get file error");
+        };
+        request2.onsuccess = function () {
+          var file = request2.result;
+          if (file) {
+            var formData = new FormData();
+            formData.append("file", file);
+            if (param) formData.append("param", param);
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", url);
+            xhr.send(formData);
+            xhr.onreadystatechange = function () {
+              if (xhr.readyState === XMLHttpRequest.DONE) {
+                if (xhr.status === 200) {
+                  retCall(0, xhr.responseText);
+                } else {
+                  console.log(xhr.responseText);
+                  retCall(4, "server error");
+                }
+              }
+            };
+          } else {
+            retCall(5, "get file data error");
+          }
+        };
+      } else {
+        retCall(2, "event.target == null");
+      }
+    } catch (error) {
+      retCall(-1, "catch error");
+    }
+  };
+}
+function createCursorHelp() {
+  var canvasSize = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 128;
+  var squareSize = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 10;
+  var isRoss = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
+  var color = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : "#ffffff";
+  var canvas = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : document.createElement("canvas");
+  var background = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : "transparent";
+  canvas.width = canvas.height = canvasSize;
+  canvas.style.background = background;
+  var ctx = canvas.getContext("2d");
+  var canvasDevil = canvasSize % 2 === 0 ? -0.5 : 0;
+  var squareDevil = squareSize % 2 === 0 ? -0.5 : 0;
+  ctx.strokeStyle = color;
+  ctx.lineWidth = 0;
+  ctx.imageSmoothingEnabled = false;
+  if (isRoss) {
+    ctx.beginPath();
+    ctx.moveTo(canvas.width / 2 + canvasDevil, canvasDevil);
+    ctx.lineTo(canvas.width / 2 + canvasDevil, canvas.height + canvasDevil);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.moveTo(canvasDevil, canvas.height / 2 + canvasDevil);
+    ctx.lineTo(canvas.width + canvasDevil, canvas.height / 2 + canvasDevil);
+    ctx.stroke();
+  }
+  ctx.beginPath();
+  ctx.strokeRect(canvasSize / 2 - squareSize / 2 + squareDevil, canvasSize / 2 - squareSize / 2 + squareDevil, squareSize, squareSize);
+  ctx.stroke();
+  return canvas.toDataURL("image/png");
+}
+function createCursor() {
+  var cursorSize = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 128;
+  var targetFrameSize = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 10;
+  var color = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : "#ffffff";
+  return {
+    Rect: "url('".concat(createCursorHelp(cursorSize, targetFrameSize, false, color), "') ").concat(cursorSize / 2, " ").concat(cursorSize / 2, ", auto"),
+    Cross: "url('".concat(createCursorHelp(cursorSize, 0, true, color), "') ").concat(cursorSize / 2, " ").concat(cursorSize / 2, " , auto"),
+    Normal: "url('".concat(createCursorHelp(cursorSize, targetFrameSize, true, color), "') ").concat(cursorSize / 2, " ").concat(cursorSize / 2, ", auto")
+  };
+}
+var MxTools = {
+  b64Encode: b64Encode,
+  b64Decode: b64Decode,
+  saveAsFileDialog: saveAsFileDialog,
+  downloadFile: downloadFile,
+  downloadFileFromUrl: downloadFileFromUrl,
+  getJsonFromUrl: getJsonFromUrl,
+  getFileFromUrl: getFileFromUrl,
+  _ML_String: _ML_String,
+  IsZero: IsZero,
+  postEmscriptenIndexedDBFile: postEmscriptenIndexedDBFile,
+  postMemoryFile: postMemoryFile,
+  createCursor: createCursor
+};
+
+function _defineProperty(obj, key, value) {
+  key = toPropertyKey(key);
+  if (key in obj) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+  return obj;
+}
+
+var lib = {exports: {}};
+
+=======
+>>>>>>> 336a3932e80ac24ad804265e40f4ad4d62d3927c
 var buffer = buffer$1;
 var Buffer = buffer.Buffer;
 var safer = {};
@@ -14145,7 +14879,11 @@ win.McDrawObjectEvent_asciiToUTF8 = function (hexstr) {
   return MxG2312Obj.decodeFromGb2312(hexstr);
 };
 
+<<<<<<< HEAD
+const version$1 = "1.0.256";
+=======
 const version$1 = "1.0.237";
+>>>>>>> 336a3932e80ac24ad804265e40f4ad4d62d3927c
 
 var isSharedArrayBuffer = ("SharedArrayBuffer" in window);
 var isCdn = document.currentScript && /unpkg\.com\/mxcad/.test(document.currentScript.src);
@@ -16022,22 +16760,50 @@ var McDbEntity = /*#__PURE__*/function (_McDbObject) {
   }, {
     key: "move",
     value: function move(fromPoint, toPoint) {
+<<<<<<< HEAD
+      this.tempRelationObject();
+      var ret = this.imp.Move(fromPoint.imp, toPoint.imp);
+      this.freeTempRelationObject();
+      return ret;
+=======
       return this.imp.Move(fromPoint.imp, toPoint.imp);
+>>>>>>> 336a3932e80ac24ad804265e40f4ad4d62d3927c
     }
   }, {
     key: "rotate",
     value: function rotate(basePoint, dRotationAngle) {
+<<<<<<< HEAD
+      this.tempRelationObject();
+      var ret = this.imp.Rotate(basePoint.imp, dRotationAngle);
+      this.freeTempRelationObject();
+      return ret;
+=======
       return this.imp.Rotate(basePoint.imp, dRotationAngle);
+>>>>>>> 336a3932e80ac24ad804265e40f4ad4d62d3927c
     }
   }, {
     key: "mirror",
     value: function mirror(point1, point2) {
+<<<<<<< HEAD
+      this.tempRelationObject();
+      var ret = this.imp.Mirror(point1.imp, point2.imp);
+      this.freeTempRelationObject();
+      return ret;
+=======
       return this.imp.Mirror(point1.imp, point2.imp);
+>>>>>>> 336a3932e80ac24ad804265e40f4ad4d62d3927c
     }
   }, {
     key: "scaleEntity",
     value: function scaleEntity(basePoint, dScaleFactor) {
+<<<<<<< HEAD
+      this.tempRelationObject();
+      var ret = this.imp.ScaleEntity(basePoint.imp, dScaleFactor);
+      this.freeTempRelationObject();
+      return ret;
+=======
       return this.imp.ScaleEntity(basePoint.imp, dScaleFactor);
+>>>>>>> 336a3932e80ac24ad804265e40f4ad4d62d3927c
     }
   }, {
     key: "transformBy",
@@ -16219,6 +16985,17 @@ var McDbEntity = /*#__PURE__*/function (_McDbObject) {
     set: function set(order) {
       this.imp.SetDrawOrder(order);
     }
+<<<<<<< HEAD
+  }, {
+    key: "normal",
+    get: function get() {
+      return new McGeVector3d(this.imp.normal());
+    },
+    set: function set(val) {
+      this.imp.setNormal(val.imp);
+    }
+=======
+>>>>>>> 336a3932e80ac24ad804265e40f4ad4d62d3927c
   }]);
   return McDbEntity;
 }(McDbObject);
@@ -16907,6 +17684,77 @@ var McDbBlockReference = /*#__PURE__*/function (_McDbEntity4) {
     value: function createAttribute() {
       return this.imp.createAttribute();
     }
+<<<<<<< HEAD
+  }, {
+    key: "getSpatialFilterId",
+    value: function getSpatialFilterId() {
+      return new McObjectId(this.imp.getSpatialFilterId(), McObjectIdType.kMxCAD);
+    }
+  }, {
+    key: "createSpatialFilter",
+    value: function createSpatialFilter() {
+      return this.imp.createSpatialFilter();
+    }
+  }, {
+    key: "clearSpatialFilterCache",
+    value: function clearSpatialFilterCache() {
+      return this.imp.clearSpatialFilterCache();
+    }
+  }]);
+  return McDbBlockReference;
+}(McDbEntity);
+var McDbSpatialFilter = /*#__PURE__*/function (_McDbObject2) {
+  _inherits$1(McDbSpatialFilter, _McDbObject2);
+  var _super11 = _createSuper$4(McDbSpatialFilter);
+  function McDbSpatialFilter(imp) {
+    var _this9;
+    _classCallCheck$1(this, McDbSpatialFilter);
+    _this9 = _super11.call(this, imp);
+    if (!imp) {
+      _this9.initTempObject(new MxCpp.mxcadassemblyimp.MdDbSpatialFilter());
+    }
+    return _this9;
+  }
+  _createClass$1(McDbSpatialFilter, [{
+    key: "boundary",
+    value: function boundary() {
+      return new McGePoint3dArray(this.imp.boundary());
+    }
+  }, {
+    key: "setBoundary",
+    value: function setBoundary(aryPoint) {
+      return this.imp.setBoundary(aryPoint.imp);
+    }
+  }, {
+    key: "isFilterInverted",
+    value: function isFilterInverted() {
+      return this.imp.isFilterInverted();
+    }
+  }, {
+    key: "setFilterInverted",
+    value: function setFilterInverted(val) {
+      return this.imp.setFilterInverted(val);
+    }
+  }, {
+    key: "isEnabled",
+    value: function isEnabled() {
+      return this.imp.isEnabled();
+    }
+  }, {
+    key: "setEnable",
+    value: function setEnable(val) {
+      return this.imp.setEnable(val);
+    }
+  }]);
+  return McDbSpatialFilter;
+}(McDbObject);
+var McDbDimension = /*#__PURE__*/function (_McDbEntity5) {
+  _inherits$1(McDbDimension, _McDbEntity5);
+  var _super12 = _createSuper$4(McDbDimension);
+  function McDbDimension(imp) {
+    _classCallCheck$1(this, McDbDimension);
+    return _super12.call(this, imp);
+=======
   }]);
   return McDbBlockReference;
 }(McDbEntity);
@@ -16916,6 +17764,7 @@ var McDbDimension = /*#__PURE__*/function (_McDbEntity5) {
   function McDbDimension(imp) {
     _classCallCheck$1(this, McDbDimension);
     return _super11.call(this, imp);
+>>>>>>> 336a3932e80ac24ad804265e40f4ad4d62d3927c
   }
   _createClass$1(McDbDimension, [{
     key: "textPosition",
@@ -17043,6 +17892,17 @@ var McDbDimension = /*#__PURE__*/function (_McDbEntity5) {
 }(McDbEntity);
 var McDbAlignedDimension = /*#__PURE__*/function (_McDbDimension) {
   _inherits$1(McDbAlignedDimension, _McDbDimension);
+<<<<<<< HEAD
+  var _super13 = _createSuper$4(McDbAlignedDimension);
+  function McDbAlignedDimension(imp) {
+    var _this10;
+    _classCallCheck$1(this, McDbAlignedDimension);
+    _this10 = _super13.call(this, imp);
+    if (!imp) {
+      _this10.initTempObject(new MxCpp.mxcadassemblyimp.MdDbAlignedDimension());
+    }
+    return _this10;
+=======
   var _super12 = _createSuper$4(McDbAlignedDimension);
   function McDbAlignedDimension(imp) {
     var _this9;
@@ -17052,6 +17912,7 @@ var McDbAlignedDimension = /*#__PURE__*/function (_McDbDimension) {
       _this9.initTempObject(new MxCpp.mxcadassemblyimp.MdDbAlignedDimension());
     }
     return _this9;
+>>>>>>> 336a3932e80ac24ad804265e40f4ad4d62d3927c
   }
   _createClass$1(McDbAlignedDimension, [{
     key: "xLine1Point",
@@ -17090,6 +17951,17 @@ var McDbAlignedDimension = /*#__PURE__*/function (_McDbDimension) {
 }(McDbDimension);
 var McDbRotatedDimension = /*#__PURE__*/function (_McDbDimension2) {
   _inherits$1(McDbRotatedDimension, _McDbDimension2);
+<<<<<<< HEAD
+  var _super14 = _createSuper$4(McDbRotatedDimension);
+  function McDbRotatedDimension(imp) {
+    var _this11;
+    _classCallCheck$1(this, McDbRotatedDimension);
+    _this11 = _super14.call(this, imp);
+    if (!imp) {
+      _this11.initTempObject(new MxCpp.mxcadassemblyimp.MdDbRotatedDimension());
+    }
+    return _this11;
+=======
   var _super13 = _createSuper$4(McDbRotatedDimension);
   function McDbRotatedDimension(imp) {
     var _this10;
@@ -17099,6 +17971,7 @@ var McDbRotatedDimension = /*#__PURE__*/function (_McDbDimension2) {
       _this10.initTempObject(new MxCpp.mxcadassemblyimp.MdDbRotatedDimension());
     }
     return _this10;
+>>>>>>> 336a3932e80ac24ad804265e40f4ad4d62d3927c
   }
   _createClass$1(McDbRotatedDimension, [{
     key: "xLine1Point",
@@ -17145,6 +18018,17 @@ var McDbRotatedDimension = /*#__PURE__*/function (_McDbDimension2) {
 }(McDbDimension);
 var McDb2LineAngularDimension = /*#__PURE__*/function (_McDbDimension3) {
   _inherits$1(McDb2LineAngularDimension, _McDbDimension3);
+<<<<<<< HEAD
+  var _super15 = _createSuper$4(McDb2LineAngularDimension);
+  function McDb2LineAngularDimension(imp) {
+    var _this12;
+    _classCallCheck$1(this, McDb2LineAngularDimension);
+    _this12 = _super15.call(this, imp);
+    if (!imp) {
+      _this12.initTempObject(new MxCpp.mxcadassemblyimp.MdDb2LineAngularDimension());
+    }
+    return _this12;
+=======
   var _super14 = _createSuper$4(McDb2LineAngularDimension);
   function McDb2LineAngularDimension(imp) {
     var _this11;
@@ -17154,6 +18038,7 @@ var McDb2LineAngularDimension = /*#__PURE__*/function (_McDbDimension3) {
       _this11.initTempObject(new MxCpp.mxcadassemblyimp.MdDb2LineAngularDimension());
     }
     return _this11;
+>>>>>>> 336a3932e80ac24ad804265e40f4ad4d62d3927c
   }
   _createClass$1(McDb2LineAngularDimension, [{
     key: "arcPoint",
@@ -17205,6 +18090,17 @@ var McDb2LineAngularDimension = /*#__PURE__*/function (_McDbDimension3) {
 }(McDbDimension);
 var McDbArc = /*#__PURE__*/function (_McDbCurve4) {
   _inherits$1(McDbArc, _McDbCurve4);
+<<<<<<< HEAD
+  var _super16 = _createSuper$4(McDbArc);
+  function McDbArc(imp) {
+    var _this13;
+    _classCallCheck$1(this, McDbArc);
+    _this13 = _super16.call(this, imp);
+    if (!imp) {
+      _this13.initTempObject(new MxCpp.mxcadassemblyimp.MdDbArc());
+    }
+    return _this13;
+=======
   var _super15 = _createSuper$4(McDbArc);
   function McDbArc(imp) {
     var _this12;
@@ -17214,6 +18110,7 @@ var McDbArc = /*#__PURE__*/function (_McDbCurve4) {
       _this12.initTempObject(new MxCpp.mxcadassemblyimp.MdDbArc());
     }
     return _this12;
+>>>>>>> 336a3932e80ac24ad804265e40f4ad4d62d3927c
   }
   _createClass$1(McDbArc, [{
     key: "setCenter",
@@ -17262,6 +18159,17 @@ var McDbArc = /*#__PURE__*/function (_McDbCurve4) {
 }(McDbCurve);
 var McDbEllipse = /*#__PURE__*/function (_McDbCurve5) {
   _inherits$1(McDbEllipse, _McDbCurve5);
+<<<<<<< HEAD
+  var _super17 = _createSuper$4(McDbEllipse);
+  function McDbEllipse(cenx, ceny, cenz, majorAxisx, majorAxisy, majorAxisz, radiusRatio, startAngle, endAngle) {
+    var _this14;
+    _classCallCheck$1(this, McDbEllipse);
+    if (cenx instanceof Object) {
+      _this14 = _super17.call(this, cenx);
+    } else {
+      _this14 = _super17.call(this);
+      _this14.initTempObject(new MxCpp.mxcadassemblyimp.MdDbEllipse());
+=======
   var _super16 = _createSuper$4(McDbEllipse);
   function McDbEllipse(cenx, ceny, cenz, majorAxisx, majorAxisy, majorAxisz, radiusRatio, startAngle, endAngle) {
     var _this13;
@@ -17271,6 +18179,7 @@ var McDbEllipse = /*#__PURE__*/function (_McDbCurve5) {
     } else {
       _this13 = _super16.call(this);
       _this13.initTempObject(new MxCpp.mxcadassemblyimp.MdDbEllipse());
+>>>>>>> 336a3932e80ac24ad804265e40f4ad4d62d3927c
       if (typeof cenx == "number") {
         if (!radiusRatio) radiusRatio = 1;
         if (typeof startAngle != "number") {
@@ -17279,10 +18188,17 @@ var McDbEllipse = /*#__PURE__*/function (_McDbCurve5) {
         if (typeof endAngle != "number") {
           endAngle = Math.PI * 2;
         }
+<<<<<<< HEAD
+        _this14.imp.InitData(new McGePoint3d(cenx, ceny, cenz).imp, new McGeVector3d(majorAxisx, majorAxisy, majorAxisz).imp, radiusRatio, startAngle, endAngle);
+      }
+    }
+    return _possibleConstructorReturn$1(_this14);
+=======
         _this13.imp.InitData(new McGePoint3d(cenx, ceny, cenz).imp, new McGeVector3d(majorAxisx, majorAxisy, majorAxisz).imp, radiusRatio, startAngle, endAngle);
       }
     }
     return _possibleConstructorReturn$1(_this13);
+>>>>>>> 336a3932e80ac24ad804265e40f4ad4d62d3927c
   }
   _createClass$1(McDbEllipse, [{
     key: "setCenter",
@@ -17352,6 +18268,28 @@ var McDbEllipse = /*#__PURE__*/function (_McDbCurve5) {
 }(McDbCurve);
 var McDbPoint = /*#__PURE__*/function (_McDbEntity6) {
   _inherits$1(McDbPoint, _McDbEntity6);
+<<<<<<< HEAD
+  var _super18 = _createSuper$4(McDbPoint);
+  function McDbPoint(x, y, z) {
+    var _this15;
+    _classCallCheck$1(this, McDbPoint);
+    if (x instanceof Object) {
+      if (x instanceof McGePoint3d) {
+        _this15 = _super18.call(this);
+        _this15.initTempObject(new MxCpp.mxcadassemblyimp.MdDbPoint());
+        _this15.imp.setPosition(x.imp);
+      } else {
+        _this15 = _super18.call(this, x);
+      }
+    } else {
+      _this15 = _super18.call(this);
+      _this15.initTempObject(new MxCpp.mxcadassemblyimp.MdDbPoint());
+      if (typeof x == "number") {
+        _this15.imp.setPosition(new McGePoint3d(x, y, z).imp);
+      }
+    }
+    return _possibleConstructorReturn$1(_this15);
+=======
   var _super17 = _createSuper$4(McDbPoint);
   function McDbPoint(x, y, z) {
     var _this14;
@@ -17372,6 +18310,7 @@ var McDbPoint = /*#__PURE__*/function (_McDbEntity6) {
       }
     }
     return _possibleConstructorReturn$1(_this14);
+>>>>>>> 336a3932e80ac24ad804265e40f4ad4d62d3927c
   }
   _createClass$1(McDbPoint, [{
     key: "setPosition",
@@ -17391,6 +18330,19 @@ var McDbPoint = /*#__PURE__*/function (_McDbEntity6) {
 }(McDbEntity);
 var McDbHatch = /*#__PURE__*/function (_McDbEntity7) {
   _inherits$1(McDbHatch, _McDbEntity7);
+<<<<<<< HEAD
+  var _super19 = _createSuper$4(McDbHatch);
+  function McDbHatch(x) {
+    var _this16;
+    _classCallCheck$1(this, McDbHatch);
+    if (x instanceof Object) {
+      _this16 = _super19.call(this, x);
+    } else {
+      _this16 = _super19.call(this);
+      _this16.initTempObject(new MxCpp.mxcadassemblyimp.MdDbHatch());
+    }
+    return _possibleConstructorReturn$1(_this16);
+=======
   var _super18 = _createSuper$4(McDbHatch);
   function McDbHatch(x) {
     var _this15;
@@ -17402,6 +18354,7 @@ var McDbHatch = /*#__PURE__*/function (_McDbEntity7) {
       _this15.initTempObject(new MxCpp.mxcadassemblyimp.MdDbHatch());
     }
     return _possibleConstructorReturn$1(_this15);
+>>>>>>> 336a3932e80ac24ad804265e40f4ad4d62d3927c
   }
   _createClass$1(McDbHatch, [{
     key: "numLoops",
@@ -17625,6 +18578,19 @@ var McDbHatch = /*#__PURE__*/function (_McDbEntity7) {
 }(McDbEntity);
 var McDbProxyEntity = /*#__PURE__*/function (_McDbEntity8) {
   _inherits$1(McDbProxyEntity, _McDbEntity8);
+<<<<<<< HEAD
+  var _super20 = _createSuper$4(McDbProxyEntity);
+  function McDbProxyEntity(x) {
+    var _this17;
+    _classCallCheck$1(this, McDbProxyEntity);
+    if (x instanceof Object) {
+      _this17 = _super20.call(this, x);
+    } else {
+      _this17 = _super20.call(this);
+      _this17.initTempObject(new MxCpp.mxcadassemblyimp.MdDbProxyEntity());
+    }
+    return _possibleConstructorReturn$1(_this17);
+=======
   var _super19 = _createSuper$4(McDbProxyEntity);
   function McDbProxyEntity(x) {
     var _this16;
@@ -17636,6 +18602,7 @@ var McDbProxyEntity = /*#__PURE__*/function (_McDbEntity8) {
       _this16.initTempObject(new MxCpp.mxcadassemblyimp.MdDbProxyEntity());
     }
     return _possibleConstructorReturn$1(_this16);
+>>>>>>> 336a3932e80ac24ad804265e40f4ad4d62d3927c
   }
   _createClass$1(McDbProxyEntity, [{
     key: "getAllTextContent",
@@ -17664,6 +18631,19 @@ var McDbProxyEntity = /*#__PURE__*/function (_McDbEntity8) {
 }(McDbEntity);
 var McDbRasterImage = /*#__PURE__*/function (_McDbEntity9) {
   _inherits$1(McDbRasterImage, _McDbEntity9);
+<<<<<<< HEAD
+  var _super21 = _createSuper$4(McDbRasterImage);
+  function McDbRasterImage(x) {
+    var _this18;
+    _classCallCheck$1(this, McDbRasterImage);
+    if (x instanceof Object) {
+      _this18 = _super21.call(this, x);
+    } else {
+      _this18 = _super21.call(this);
+      _this18.initTempObject(new MxCpp.mxcadassemblyimp.MdDbRasterImage());
+    }
+    return _possibleConstructorReturn$1(_this18);
+=======
   var _super20 = _createSuper$4(McDbRasterImage);
   function McDbRasterImage(x) {
     var _this17;
@@ -17675,6 +18655,7 @@ var McDbRasterImage = /*#__PURE__*/function (_McDbEntity9) {
       _this17.initTempObject(new MxCpp.mxcadassemblyimp.MdDbRasterImage());
     }
     return _possibleConstructorReturn$1(_this17);
+>>>>>>> 336a3932e80ac24ad804265e40f4ad4d62d3927c
   }
   _createClass$1(McDbRasterImage, [{
     key: "setOrientation",
@@ -17731,6 +18712,19 @@ var McDbRasterImage = /*#__PURE__*/function (_McDbEntity9) {
 }(McDbEntity);
 var McDbWipeout = /*#__PURE__*/function (_McDbEntity10) {
   _inherits$1(McDbWipeout, _McDbEntity10);
+<<<<<<< HEAD
+  var _super22 = _createSuper$4(McDbWipeout);
+  function McDbWipeout(x) {
+    var _this19;
+    _classCallCheck$1(this, McDbWipeout);
+    if (x instanceof Object) {
+      _this19 = _super22.call(this, x);
+    } else {
+      _this19 = _super22.call(this);
+      _this19.initTempObject(new MxCpp.mxcadassemblyimp.MdDbWipeout());
+    }
+    return _possibleConstructorReturn$1(_this19);
+=======
   var _super21 = _createSuper$4(McDbWipeout);
   function McDbWipeout(x) {
     var _this18;
@@ -17742,6 +18736,7 @@ var McDbWipeout = /*#__PURE__*/function (_McDbEntity10) {
       _this18.initTempObject(new MxCpp.mxcadassemblyimp.MdDbWipeout());
     }
     return _possibleConstructorReturn$1(_this18);
+>>>>>>> 336a3932e80ac24ad804265e40f4ad4d62d3927c
   }
   _createClass$1(McDbWipeout, [{
     key: "setVertices",
@@ -17758,10 +18753,17 @@ var McDbWipeout = /*#__PURE__*/function (_McDbEntity10) {
 }(McDbEntity);
 var McDbBackgroundEntity = /*#__PURE__*/function (_McDbEntity11) {
   _inherits$1(McDbBackgroundEntity, _McDbEntity11);
+<<<<<<< HEAD
+  var _super23 = _createSuper$4(McDbBackgroundEntity);
+  function McDbBackgroundEntity(x) {
+    _classCallCheck$1(this, McDbBackgroundEntity);
+    return _super23.call(this, x);
+=======
   var _super22 = _createSuper$4(McDbBackgroundEntity);
   function McDbBackgroundEntity(x) {
     _classCallCheck$1(this, McDbBackgroundEntity);
     return _super22.call(this, x);
+>>>>>>> 336a3932e80ac24ad804265e40f4ad4d62d3927c
   }
   _createClass$1(McDbBackgroundEntity, [{
     key: "setShow",
@@ -18041,6 +19043,14 @@ var McDbCustomEntity = /*#__PURE__*/function (_McDbEntity) {
     value: function getGripPoints() {
       return new McGePoint3dArray();
     }
+<<<<<<< HEAD
+  }, {
+    key: "transformBy",
+    value: function transformBy(_mat) {
+      return false;
+    }
+=======
+>>>>>>> 336a3932e80ac24ad804265e40f4ad4d62d3927c
   }]);
   return McDbCustomEntity;
 }(McDbEntity);
@@ -18240,6 +19250,21 @@ var MxCustomEntityManagerImp = /*#__PURE__*/function () {
         if (!ent) return;
         ent.syncData(toCpp != 0);
       };
+<<<<<<< HEAD
+      win.MxCustomEntityManager_transformBy = function (customid, indexIdDatabase, ptrMat, tempid) {
+        var mat = new McGeMatrix3d();
+        mat.imp.copyFormPointer(ptrMat);
+        var ent;
+        if (tempid != 0) {
+          ent = MxCustomEntityManager.getTmpObject(tempid);
+        } else {
+          ent = MxCustomEntityManager.getObject(customid, indexIdDatabase);
+        }
+        if (!ent) return;
+        ent.transformBy(mat);
+      };
+=======
+>>>>>>> 336a3932e80ac24ad804265e40f4ad4d62d3927c
     }
   }]);
   return MxCustomEntityManagerImp;
@@ -18586,7 +19611,11 @@ var McCmColor = /*#__PURE__*/function () {
   }, {
     key: "getColorString",
     value: function getColorString() {
+<<<<<<< HEAD
+      return this.imp.getColorString();
+=======
       return MxG2312Obj.decodeFromGb2312(this.imp.getColorString());
+>>>>>>> 336a3932e80ac24ad804265e40f4ad4d62d3927c
     }
   }, {
     key: "getColorValue",
@@ -20287,6 +21316,14 @@ var McObject = /*#__PURE__*/function () {
       }
     }
   }, {
+<<<<<<< HEAD
+    key: "clearMxCurrentSelect",
+    value: function clearMxCurrentSelect() {
+      this.getMxDrawObject().clearMxCurrentSelect();
+    }
+  }, {
+=======
+>>>>>>> 336a3932e80ac24ad804265e40f4ad4d62d3927c
     key: "zoomW",
     value: function zoomW(minPt, maxPt) {
       var mxobj = this.getMxDrawObject();
@@ -20615,7 +21652,11 @@ var McObject = /*#__PURE__*/function () {
   }, {
     key: "addDimStyle",
     value: function addDimStyle(pszName, pszDoubleData, pszIntData, pszStringData, pszIdData) {
+<<<<<<< HEAD
+      return new McObjectId(this.imp.AddDimStyle(MxG2312Obj.encodeToGb2312(pszName), MxG2312Obj.encodeToGb2312(pszDoubleData), MxG2312Obj.encodeToGb2312(pszIntData), MxG2312Obj.encodeToGb2312(pszStringData), MxG2312Obj.encodeToGb2312(pszIdData)));
+=======
       return new McObjectId(this.imp.AddDimStyle(pszName, pszDoubleData, pszIntData, pszStringData, pszIdData));
+>>>>>>> 336a3932e80ac24ad804265e40f4ad4d62d3927c
     }
   }, {
     key: "drawDimStyle",
@@ -21127,6 +22168,15 @@ var McAppType = /*#__PURE__*/function () {
       this.classNameToCreateCalls["McDbBlockReference"] = function () {
         return new McDbBlockReference();
       };
+<<<<<<< HEAD
+      this.objectIdToObjectCalls["McDbSpatialFilter"] = function (lIdIndex) {
+        return new McDbSpatialFilter(_this8.imp.ObjectIdToMdDbSpatialFilter(lIdIndex));
+      };
+      this.classNameToCreateCalls["McDbSpatialFilter"] = function () {
+        return new McDbSpatialFilter();
+      };
+=======
+>>>>>>> 336a3932e80ac24ad804265e40f4ad4d62d3927c
       this.objectIdToObjectCalls["McDbAlignedDimension"] = function (lIdIndex) {
         return new McDbAlignedDimension(_this8.imp.ObjectIdToMdDbAlignedDimension(lIdIndex));
       };
@@ -21323,6 +22373,10 @@ var McAppType = /*#__PURE__*/function () {
     key: "addNetworkLoadingFont",
     value: function addNetworkLoadingFont(fontfiles) {
       var _this9 = this;
+<<<<<<< HEAD
+      var fontFilesLoadOnInitialization = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
+=======
+>>>>>>> 336a3932e80ac24ad804265e40f4ad4d62d3927c
       this.shxFonts = [];
       if (typeof fontfiles == "string") {
         this.imp.addNetworkLoadingFont(fontfiles);
@@ -21333,6 +22387,12 @@ var McAppType = /*#__PURE__*/function () {
           _this9.imp.addNetworkLoadingFont(val);
         });
       }
+<<<<<<< HEAD
+      fontFilesLoadOnInitialization.forEach(function (val) {
+        _this9.imp.addFontsLoadOnInitialization(val, 0);
+      });
+=======
+>>>>>>> 336a3932e80ac24ad804265e40f4ad4d62d3927c
     }
   }, {
     key: "IniSet",
@@ -21343,6 +22403,10 @@ var McAppType = /*#__PURE__*/function () {
     key: "addNetworkLoadingBigFont",
     value: function addNetworkLoadingBigFont(fontfiles) {
       var _this10 = this;
+<<<<<<< HEAD
+      var fontFilesLoadOnInitialization = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
+=======
+>>>>>>> 336a3932e80ac24ad804265e40f4ad4d62d3927c
       this.shxBigFonts = [];
       if (typeof fontfiles == "string") {
         this.imp.addNetworkLoadingFont(fontfiles);
@@ -21353,10 +22417,21 @@ var McAppType = /*#__PURE__*/function () {
           _this10.imp.addNetworkLoadingFont(val);
         });
       }
+<<<<<<< HEAD
+      fontFilesLoadOnInitialization.forEach(function (val) {
+        _this10.imp.addFontsLoadOnInitialization(val, 1);
+      });
+=======
+>>>>>>> 336a3932e80ac24ad804265e40f4ad4d62d3927c
     }
   }, {
     key: "addNetworkLoadingTrueTypeFont",
     value: function addNetworkLoadingTrueTypeFont(fontname, fontzhName, fontfile) {
+<<<<<<< HEAD
+      var _this11 = this;
+      var fontNamesLoadOnInitialization = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : [];
+=======
+>>>>>>> 336a3932e80ac24ad804265e40f4ad4d62d3927c
       var len = fontname.length;
       for (var i = 0; i < len; i++) {
         this.imp.addNetworkLoadingTrueTypeFont(fontname[i], fontzhName[i], fontfile[i]);
@@ -21366,6 +22441,12 @@ var McAppType = /*#__PURE__*/function () {
           file: fontfile[i]
         };
       }
+<<<<<<< HEAD
+      fontNamesLoadOnInitialization.forEach(function (val) {
+        _this11.imp.addFontsLoadOnInitialization(val, 2);
+      });
+=======
+>>>>>>> 336a3932e80ac24ad804265e40f4ad4d62d3927c
     }
   }, {
     key: "getShxFonts",
@@ -21385,10 +22466,17 @@ var McAppType = /*#__PURE__*/function () {
   }, {
     key: "getTrueTypeFonts",
     value: function getTrueTypeFonts() {
+<<<<<<< HEAD
+      var _this12 = this;
+      var ret = [];
+      Object.keys(this.trueFonts).forEach(function (key) {
+        ret.push(_this12.trueFonts[key]);
+=======
       var _this11 = this;
       var ret = [];
       Object.keys(this.trueFonts).forEach(function (key) {
         ret.push(_this11.trueFonts[key]);
+>>>>>>> 336a3932e80ac24ad804265e40f4ad4d62d3927c
       });
       return ret;
     }
@@ -26447,7 +27535,11 @@ function _drawPolyLine() {
           window.addEventListener("keydown", onKeydown);
           window.addEventListener("keyup", onkeyup);
           _loop = /*#__PURE__*/regenerator.mark(function _loop() {
+<<<<<<< HEAD
+            var sPrompt, sKeyWord, getNextPoint, drawData, ptNext, nextData, pPolyline, getWidth, dWVal, _getWidth, _dWVal, _vecData, vet, pt, _pt, endPoint, length, nextPoint, _nextData, _pPolyline, _sPrompt, _sKeyWord, _getNextPoint, vecArcTangent, iSzie, pt1, dBluge, pt2, tmpPl, tmpVec, userDrawFristData, _ptNext, _nextData2, iSize, _pPolyline2, getAngle, angle, startPoint, getBulge, _pt2, center, radius, _endPoint, nextData2, iSize2, _pPolyline3, getDist, _radius, oppositeSide, _pt3, _endPoint2, _nextData3, _iSize, _pPolyline4, _nextData4, _iSize2, _pPolyline5, _center, _startPoint, _radius2, _pt4, _getAngle, angle2, angleA, mVet, eVet, midPoint2, endPoint2, dBulge2, _nextData5, _iSize3, _pPolyline6, _getDist, dist, includedAngle, vet2, _midPoint, _endPoint3, _dBulge, _nextData6, _iSize4, _pPolyline7, _endPoint4, _angle, midPt, _vet, midPoint, dBulge, _nextData7, _iSize5, _pPolyline8, getRadius, dRVal, _startPoint2, _pt5, _getAngle2, _angle2, chordLength, _pt6, _vet2, entPoint, center2, _midPoint2, _dBulge2, _nextData8, _iSize6, _pPolyline9, _dist, _angle3, _center2, _midPoint3, _dBulge3, _nextData9, _iSize7, _pPolyline10, _getWidth2, _dWVal2, val, vecArcTangent2, _pt7, _nextData10, _iSize8, _pPolyline11, _pt8, getSecondPoint, _pt9, getThirdPoint, _nextPoint, _midPoint4, arc, retBulge, _nextData11, _iSize9, _pPolyline12, _getWidth3, _dWVal3;
+=======
             var sPrompt, sKeyWord, getNextPoint, drawData, ptNext, nextData, pPolyline, getWidth, dWVal, _getWidth, _dWVal, _vecData, vet, pt, _pt, endPoint, length, nextPoint, _nextData, _pPolyline, _sPrompt, _sKeyWord, _getNextPoint, vecArcTangent, iSzie, pt1, dBluge, pt2, tmpPl, tmpVec, userDrawFristData, _ptNext, _nextData2, iSize, _pPolyline2, getAngle, angle, startPoint, getBulge, _pt2, center, radius, _endPoint, nextData2, iSize2, _pPolyline3, getDist, _radius, oppositeSide, _pt3, _endPoint2, _nextData3, _iSize, _pPolyline4, _nextData4, _iSize2, _pPolyline5, _center, _startPoint, _radius2, _pt4, _getAngle, angle2, angleA, mVet, eVet, midPoint2, endPoint2, dBulge2, _nextData5, _iSize3, _pPolyline6, _getDist, dist, includedAngle, vet2, _midPoint, _endPoint3, _dBulge, _nextData6, _iSize4, _pPolyline7, _endPoint4, _angle, midPt, _vet, midPoint, dBulge, _nextData7, _iSize5, _pPolyline8, getRadius, dRVal, _startPoint2, _pt5, _getAngle2, _angle2, chordLength, _pt6, _vet2, entPoint, center2, _midPoint2, _dBulge2, _nextData8, _iSize6, _pPolyline9, _dist, _angle3, _center2, _midPoint3, _dBulge3, _nextData9, _iSize7, _pPolyline10, _getWidth2, _dWVal2, val, vecArcTangent2, _pt7, _nextData10, _iSize8, _pPolyline11, _pt8, getSecondPoint, _pt9, getThirdPoint, _nextPoint, retBulge, _nextData11, _iSize9, _pPolyline12, _getWidth3, _dWVal3;
+>>>>>>> 336a3932e80ac24ad804265e40f4ad4d62d3927c
             return regenerator.wrap(function _loop$(_context) {
               while (1) switch (_context.prev = _context.next) {
                 case 0:
@@ -26650,7 +27742,11 @@ function _drawPolyLine() {
                 case 104:
                   return _context.abrupt("return", 0);
                 case 105:
+<<<<<<< HEAD
+                  _context.next = 495;
+=======
                   _context.next = 493;
+>>>>>>> 336a3932e80ac24ad804265e40f4ad4d62d3927c
                   break;
                 case 107:
                   _sPrompt = _ML_String("NO1_ID_ARX_PL5", "\u6307\u5B9A\u5706\u5F27\u7684\u7AEF\u70B9(\u6309\u4F4F Ctrl \u952E\u4EE5\u5207\u6362\u65B9\u5411)");
@@ -26719,11 +27815,19 @@ function _drawPolyLine() {
                     _pPolyline2.addVertexAt(vecData[iSize - 1].pt);
                     vecTmpObjectId.push(mxcad.drawEntity(_pPolyline2));
                   }
+<<<<<<< HEAD
+                  _context.next = 495;
+                  break;
+                case 132:
+                  if (!(_getNextPoint.getStatus() == MrxDbgUiPrBaseReturn.kKeyWord)) {
+                    _context.next = 494;
+=======
                   _context.next = 493;
                   break;
                 case 132:
                   if (!(_getNextPoint.getStatus() == MrxDbgUiPrBaseReturn.kKeyWord)) {
                     _context.next = 492;
+>>>>>>> 336a3932e80ac24ad804265e40f4ad4d62d3927c
                     break;
                   }
                   if (!_getNextPoint.isKeyWordPicked("A")) {
@@ -27306,11 +28410,19 @@ function _drawPolyLine() {
                     break;
                   }
                   isDrawLine = true;
+<<<<<<< HEAD
+                  _context.next = 492;
+                  break;
+                case 437:
+                  if (!_getNextPoint.isKeyWordPicked("S")) {
+                    _context.next = 463;
+=======
                   _context.next = 490;
                   break;
                 case 437:
                   if (!_getNextPoint.isKeyWordPicked("S")) {
                     _context.next = 461;
+>>>>>>> 336a3932e80ac24ad804265e40f4ad4d62d3927c
                     break;
                   }
                   _pt8 = new McGePoint3d(vecData[vecData.length - 1].pt.x, vecData[vecData.length - 1].pt.y, 0);
@@ -27332,6 +28444,14 @@ function _drawPolyLine() {
                   getThirdPoint.setUserDraw(function (currendPoint, pWorldDraw) {
                     var arc = new McDbArc();
                     arc.computeArc(_pt8.x, _pt8.y, _pt9.x, _pt9.y, currendPoint.x, currendPoint.y);
+<<<<<<< HEAD
+                    var midPoint = _pt9;
+                    if (isCtrl) {
+                      midPoint = arc.center.clone().addvec(arc.center.clone().sub(midPoint));
+                      arc.computeArc(_pt8.x, _pt8.y, midPoint.x, midPoint.y, currendPoint.x, currendPoint.y);
+                    }
+=======
+>>>>>>> 336a3932e80ac24ad804265e40f4ad4d62d3927c
                     pWorldDraw.drawMcDbEntity(arc);
                   });
                   _context.next = 452;
@@ -27339,10 +28459,23 @@ function _drawPolyLine() {
                 case 452:
                   _nextPoint = _context.sent;
                   if (!(_nextPoint !== null)) {
+<<<<<<< HEAD
+                    _context.next = 460;
+                    break;
+                  }
+                  _midPoint4 = _pt9;
+                  if (isCtrl) {
+                    arc = new McDbArc();
+                    arc.computeArc(_pt8.x, _pt8.y, _midPoint4.x, _midPoint4.y, _nextPoint.x, _nextPoint.y);
+                    _midPoint4 = arc.center.clone().addvec(arc.center.clone().sub(_midPoint4));
+                  }
+                  retBulge = MxCADUtility.calcBulge(_pt8, _midPoint4, _nextPoint);
+=======
                     _context.next = 458;
                     break;
                   }
                   retBulge = MxCADUtility.calcBulge(_pt8, _pt9, _nextPoint);
+>>>>>>> 336a3932e80ac24ad804265e40f4ad4d62d3927c
                   if (retBulge.ret) {
                     _nextData11 = {};
                     _nextData11.dStartWidth = dStartWidth;
@@ -27361,6 +28494,18 @@ function _drawPolyLine() {
                   } else {
                     MxFun.acutPrintf(_ML_String("ID_ENDPOINT_INVALID1", "\n \u7AEF\u70B9 *\u65E0\u6548*"));
                   }
+<<<<<<< HEAD
+                  _context.next = 461;
+                  break;
+                case 460:
+                  return _context.abrupt("return", 0);
+                case 461:
+                  _context.next = 492;
+                  break;
+                case 463:
+                  if (!_getNextPoint.isKeyWordPicked("W")) {
+                    _context.next = 485;
+=======
                   _context.next = 459;
                   break;
                 case 458:
@@ -27371,10 +28516,35 @@ function _drawPolyLine() {
                 case 461:
                   if (!_getNextPoint.isKeyWordPicked("W")) {
                     _context.next = 483;
+>>>>>>> 336a3932e80ac24ad804265e40f4ad4d62d3927c
                     break;
                   }
                   _getWidth3 = new MxCADUiPrDist();
                   _getWidth3.setMessage(_ML_String("ID_ARX_PLGETSTARTWIDTH", "\u6307\u5B9A\u8D77\u70B9\u5BBD\u5EA6"));
+<<<<<<< HEAD
+                  _context.next = 468;
+                  return _getWidth3.go();
+                case 468:
+                  _dWVal3 = _context.sent;
+                  if (!(_dWVal3 === null)) {
+                    _context.next = 471;
+                    break;
+                  }
+                  return _context.abrupt("return", 0);
+                case 471:
+                  dStartWidth = _getWidth3.value();
+                  _getWidth3.setMessage(_ML_String("ID_ARX_PLGETVERITXWIDTH", "\u6307\u5B9A\u7AEF\u70B9\u5BBD\u5EA6"));
+                  _context.next = 475;
+                  return _getWidth3.go();
+                case 475:
+                  _dWVal3 = _context.sent;
+                  if (!(_dWVal3 === null)) {
+                    _context.next = 478;
+                    break;
+                  }
+                  return _context.abrupt("return", 0);
+                case 478:
+=======
                   _context.next = 466;
                   return _getWidth3.go();
                 case 466:
@@ -27397,22 +28567,35 @@ function _drawPolyLine() {
                   }
                   return _context.abrupt("return", 0);
                 case 476:
+>>>>>>> 336a3932e80ac24ad804265e40f4ad4d62d3927c
                   dEndWidth = _getWidth3.value();
                   s_dWidth = dEndWidth;
                   vecData[vecData.length - 1].dStartWidth = dStartWidth;
                   vecData[vecData.length - 1].dEndWidth = dEndWidth;
                   dStartWidth = dEndWidth;
+<<<<<<< HEAD
+                  _context.next = 492;
+                  break;
+                case 485:
+                  if (!_getNextPoint.isKeyWordPicked("C")) {
+                    _context.next = 491;
+=======
                   _context.next = 490;
                   break;
                 case 483:
                   if (!_getNextPoint.isKeyWordPicked("C")) {
                     _context.next = 489;
+>>>>>>> 336a3932e80ac24ad804265e40f4ad4d62d3927c
                     break;
                   }
                   vecData[vecData.length - 1].dBulge = CMxDrawPolylineDragArcDraw_CalcArcBulge(userDrawFristData.pt, firstPoint, isCtrl ? vecArcTangent.clone().negate() : vecArcTangent);
                   isClose = true;
                   return _context.abrupt("return", 0);
+<<<<<<< HEAD
+                case 491:
+=======
                 case 489:
+>>>>>>> 336a3932e80ac24ad804265e40f4ad4d62d3927c
                   if (_getNextPoint.isKeyWordPicked("U")) {
                     if (vecData.length > 1) {
                       vecData.pop();
@@ -27423,12 +28606,21 @@ function _drawPolyLine() {
                       }
                     }
                   }
+<<<<<<< HEAD
+                case 492:
+                  _context.next = 495;
+                  break;
+                case 494:
+                  return _context.abrupt("return", 0);
+                case 495:
+=======
                 case 490:
                   _context.next = 493;
                   break;
                 case 492:
                   return _context.abrupt("return", 0);
                 case 493:
+>>>>>>> 336a3932e80ac24ad804265e40f4ad4d62d3927c
                 case "end":
                   return _context.stop();
               }
@@ -35337,6 +36529,24 @@ var MxCAD3DObject = /*#__PURE__*/function () {
       this.imp.setDisplayMode(theMode);
     }
   }, {
+<<<<<<< HEAD
+    key: "enableDirLightSrc",
+    value: function enableDirLightSrc(theToEnabled) {
+      this.imp.enableDirLightSrc(theToEnabled);
+    }
+  }, {
+    key: "setCubemapBackground",
+    value: function setCubemapBackground(theRight, theLeft, theTop, theBottom, theFront, theBack) {
+      this.imp.setCubemapBackground(theRight, theLeft, theTop, theBottom, theFront, theBack);
+    }
+  }, {
+    key: "setManipulatorEnabled",
+    value: function setManipulatorEnabled(isEnabled) {
+      this.imp.setManipulatorEnabled(isEnabled);
+    }
+  }, {
+=======
+>>>>>>> 336a3932e80ac24ad804265e40f4ad4d62d3927c
     key: "getImp",
     value: function getImp() {
       return this.imp;
@@ -35493,6 +36703,17 @@ var MxCAD3DObject = /*#__PURE__*/function () {
           _this2.init(MxApp3D.cpp_app.createView(canvasParam));
           _this2.callEvent("init");
         };
+<<<<<<< HEAD
+        if (!config.locateFile) config.locateFile = get3DFileURL;
+        config.canvas = canvas;
+        config.on = MxApp3D.on.bind(MxApp3D);
+        config.emit = MxApp3D.emit.bind(MxApp3D);
+        config.off = MxApp3D.off.bind(MxApp3D);
+        loadWams("mxdraw3d_min", "mxdraw3d", Object.assign({}, config)).then(function (module) {
+          MxApp3D.init(module);
+          on_init();
+        });
+=======
         if (MxApp3D.imp) {
           on_init();
         } else {
@@ -35506,6 +36727,7 @@ var MxCAD3DObject = /*#__PURE__*/function () {
             on_init();
           });
         }
+>>>>>>> 336a3932e80ac24ad804265e40f4ad4d62d3927c
       };
       window.onload = function () {
         init();
@@ -37835,6 +39057,24 @@ var Mx3dView = /*#__PURE__*/function (_Mx3dBaseObject9) {
     value: function setDisplayMode(theMode) {
       this.imp.setDisplayMode(theMode);
     }
+<<<<<<< HEAD
+  }, {
+    key: "enableDirLightSrc",
+    value: function enableDirLightSrc(theToEnabled) {
+      this.imp.enableDirLightSrc(theToEnabled);
+    }
+  }, {
+    key: "setCubemapBackground",
+    value: function setCubemapBackground(theRight, theLeft, theTop, theBottom, theFront, theBack) {
+      this.imp.setCubemapBackground(theRight, theLeft, theTop, theBottom, theFront, theBack);
+    }
+  }, {
+    key: "setManipulatorEnabled",
+    value: function setManipulatorEnabled(isEnabled) {
+      this.imp.setManipulatorEnabled(isEnabled);
+    }
+=======
+>>>>>>> 336a3932e80ac24ad804265e40f4ad4d62d3927c
   }]);
   return Mx3dView;
 }(Mx3dBaseObject);
@@ -38594,9 +39834,25 @@ var Mx3dDbDocument = /*#__PURE__*/function (_Mx3dDbObject) {
           var aDataArray = new Uint8Array(aReader.result);
           var len = aDataArray.length;
           var arrayPointer = MxApp3D.imp._malloc(len);
+<<<<<<< HEAD
+          var mx3dMapArray = new Uint8Array(MxApp3D.imp.HEAPU8.buffer, arrayPointer, len);
+          mx3dMapArray.set(aDataArray);
+          var funRes = function funRes(strPtr) {
+            var str = getStrFromMemory(strPtr);
+            console.log(str);
+          };
+          var funRej = function funRej(strPtr) {
+            var str = getStrFromMemory(strPtr);
+            console.log("failed load file: " + str);
+          };
+          var funResPtr = MxApp3D.imp.addFunction(funRes, "vp");
+          var funRejPtr = MxApp3D.imp.addFunction(funRej, "vp");
+          MxApp3D.imp.loadFileFromMemory("/" + filePath, arrayPointer, len, true, funResPtr, funRejPtr);
+=======
           var mx3dMapArray = new Uint8Array(MxApp3D.imp.asm.memory.buffer, arrayPointer, len);
           mx3dMapArray.set(aDataArray);
           MxApp3D.imp.loadFileFromMemory(filePath, arrayPointer, len, true);
+>>>>>>> 336a3932e80ac24ad804265e40f4ad4d62d3927c
           MxApp3D.imp._free(arrayPointer);
           res(_this32.imp.read(filePath, theFormat));
         };
@@ -38609,7 +39865,11 @@ var Mx3dDbDocument = /*#__PURE__*/function (_Mx3dDbObject) {
   }, {
     key: "readFile",
     value: function readFile(theFilePath, theFormat) {
+<<<<<<< HEAD
+      return this.imp.read(theFilePath, theFormat);
+=======
       this.imp.read(theFilePath, theFormat);
+>>>>>>> 336a3932e80ac24ad804265e40f4ad4d62d3927c
     }
   }, {
     key: "getAccessLabel",
@@ -38692,7 +39952,11 @@ var Mx3dDbDocument = /*#__PURE__*/function (_Mx3dDbObject) {
       if (fileBufferPointer == 0) {
         return false;
       }
+<<<<<<< HEAD
+      var mx3dMapArray = new Uint8Array(MxApp3D.imp.HEAPU8.buffer, fileBufferPointer, fileSize);
+=======
       var mx3dMapArray = new Uint8Array(MxApp3D.imp.asm.memory.buffer, fileBufferPointer, fileSize);
+>>>>>>> 336a3932e80ac24ad804265e40f4ad4d62d3927c
       var blob = new Blob([mx3dMapArray], {
         type: "application/octet-stream"
       });
@@ -39467,6 +40731,39 @@ var Mx3dUtils = /*#__PURE__*/function () {
       }
       return ret;
     }
+<<<<<<< HEAD
+  }, {
+    key: "LoadLocalFile",
+    value: function LoadLocalFile(theFile, theFilePath) {
+      var aReader = new FileReader();
+      return new Promise(function (res, rej) {
+        aReader.onload = function () {
+          var aDataArray = new Uint8Array(aReader.result);
+          var len = aDataArray.length;
+          var arrayPointer = MxApp3D.imp._malloc(len);
+          var mx3dMapArray = new Uint8Array(MxApp3D.imp.HEAPU8.buffer, arrayPointer, len);
+          mx3dMapArray.set(aDataArray);
+          var funRes = function funRes(strPtr) {
+            var str = getStrFromMemory(strPtr);
+            res(str);
+          };
+          var funRej = function funRej(strPtr) {
+            var str = getStrFromMemory(strPtr);
+            rej("failed load file: " + str);
+          };
+          var funResPtr = MxApp3D.imp.addFunction(funRes, "vp");
+          var funRejPtr = MxApp3D.imp.addFunction(funRej, "vp");
+          MxApp3D.imp.loadFileFromMemory(theFilePath, arrayPointer, len, true, funResPtr, funRejPtr);
+          MxApp3D.imp._free(arrayPointer);
+        };
+        aReader.onerror = function (err) {
+          rej(err);
+        };
+        aReader.readAsArrayBuffer(theFile);
+      });
+    }
+=======
+>>>>>>> 336a3932e80ac24ad804265e40f4ad4d62d3927c
   }]);
   return Mx3dUtils;
 }();
@@ -40935,15 +42232,26 @@ var Mx3dMkPipe = /*#__PURE__*/function (_Mx3dMkObject7) {
 var Mx3dMkPrism = /*#__PURE__*/function (_Mx3dMkObject8) {
   _inherits$1(Mx3dMkPrism, _Mx3dMkObject8);
   var _super61 = _createSuper(Mx3dMkPrism);
+<<<<<<< HEAD
+  function Mx3dMkPrism(S, D) {
+=======
   function Mx3dMkPrism(S, D, Inf, Copy, Canonize) {
+>>>>>>> 336a3932e80ac24ad804265e40f4ad4d62d3927c
     var _this51;
     _classCallCheck$1(this, Mx3dMkPrism);
     if (S instanceof Mx3dShapeObject && D instanceof Mx3dGeVec) {
       _this51 = _super61.call(this);
+<<<<<<< HEAD
+      _this51.initTempObject(new MxApp3D.imp.Mx3dMkPrism(S.getImp(), D.getImp(), false, true));
+    } else if (S instanceof Mx3dShapeObject && D instanceof Mx3dGeDir) {
+      _this51 = _super61.call(this);
+      _this51.initTempObject(new MxApp3D.imp.Mx3dMkPrism(S.getImp(), D.getImp(), true, false, true));
+=======
       _this51.initTempObject(new MxApp3D.imp.Mx3dMkPrism(S.getImp(), D.getImp(), Inf, Copy));
     } else if (S instanceof Mx3dShapeObject && D instanceof Mx3dGeDir) {
       _this51 = _super61.call(this);
       _this51.initTempObject(new MxApp3D.imp.Mx3dMkPrism(S.getImp(), D.getImp(), Inf, Copy, Canonize));
+>>>>>>> 336a3932e80ac24ad804265e40f4ad4d62d3927c
     } else if (S instanceof Object) {
       _this51 = _super61.call(this, S);
     }
@@ -41250,7 +42558,13 @@ var Mx3dWireTool = /*#__PURE__*/function () {
   }
   _createClass$1(Mx3dWireTool, null, [{
     key: "ConnectEdgesToWires",
+<<<<<<< HEAD
+    value: function ConnectEdgesToWires(edges) {
+      var toler = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1e-6;
+      var shared = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
+=======
     value: function ConnectEdgesToWires(edges, toler, shared) {
+>>>>>>> 336a3932e80ac24ad804265e40f4ad4d62d3927c
       var paramShapeSeq = new Mx3dShapeObjectSequence();
       edges.forEach(function (e) {
         return paramShapeSeq.Append(e);
@@ -41264,7 +42578,13 @@ var Mx3dWireTool = /*#__PURE__*/function () {
     }
   }, {
     key: "ConnectWiresToWires",
+<<<<<<< HEAD
+    value: function ConnectWiresToWires(wires) {
+      var toler = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1e-6;
+      var shared = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
+=======
     value: function ConnectWiresToWires(wires, toler, shared) {
+>>>>>>> 336a3932e80ac24ad804265e40f4ad4d62d3927c
       var paramShapeSeq = new Mx3dShapeObjectSequence();
       wires.forEach(function (w) {
         return paramShapeSeq.Append(w);
@@ -48116,6 +49436,10 @@ const mxcad = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   IsZero,
   postMemoryFile,
   postEmscriptenIndexedDBFile,
+<<<<<<< HEAD
+  createCursor,
+=======
+>>>>>>> 336a3932e80ac24ad804265e40f4ad4d62d3927c
   MxTools,
   McGePoint3d,
   McGeVector3d,
@@ -48174,6 +49498,10 @@ const mxcad = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   McDbCircle,
   McDbPolyline,
   McDbBlockReference,
+<<<<<<< HEAD
+  McDbSpatialFilter,
+=======
+>>>>>>> 336a3932e80ac24ad804265e40f4ad4d62d3927c
   McDbDimension,
   McDbAlignedDimension,
   McDbRotatedDimension,
@@ -48321,4 +49649,12 @@ const mxcad = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   mx_gcj02_To_gps84
 }, Symbol.toStringTag, { value: 'Module' }));
 
+<<<<<<< HEAD
+globalThis.Buffer = buffer$1.Buffer;
+globalThis.Buffer.alloc = buffer$1.Buffer.alloc;
+globalThis.Buffer.from = buffer$1.Buffer.from;
+
+export { ColorIndexType, ColorMethod, DxfCode, FetchAttributes, IMcDbDwgFiler, IsZero, McAppType, McCmColor, McDb, McDb2LineAngularDimension, McDbAlignedDimension, McDbArc, McDbAttribute, McDbAttributeDefinition, McDbBackgroundEntity, McDbBlockReference, McDbBlockTable, McDbBlockTableRecord, McDbCircle, McDbCurve, McDbCustomEntity, McDbDatabase, McDbDictionary, McDbDimStyleTable, McDbDimStyleTableRecord, McDbDimension, McDbEllipse, McDbEntity, McDbGroup, McDbHatch, McDbLayerTable, McDbLayerTableRecord, McDbLine, McDbLinetypeTable, McDbLinetypeTableRecord, McDbMText, McDbObject, McDbObjectArray, McDbPoint, McDbPolyline, McDbProxyEntity, McDbRasterImage, McDbRasterImageDef, McDbRotatedDimension, McDbSpatialFilter, McDbText, McDbTextStyleTable, McDbTextStyleTableRecord, McDbWipeout, McDbXrecord, McGeBound, McGeDoubleArray, McGeLongArray, McGeMatrix3d, McGePoint3d, McGePoint3dArray, McGeStringArray, McGeVector3d, McObject, McObjectId, McObjectIdType, McRxObject, MdGe, Mx3dAlgoChamfer, Mx3dAlgoFillet, Mx3dAlgoFillet2d, Mx3dAlgoObject, Mx3dApplication, Mx3dAspectArrow, Mx3dAspectDim, Mx3dAspectLine, Mx3dAspectObject, Mx3dAspectText, Mx3dBaseObject, Mx3dBrepCastGeom, Mx3dDbDocument, Mx3dDbLabel, Mx3dDbObject, Mx3dDimAngle, Mx3dDimDiameter, Mx3dDimLength, Mx3dDimObject, Mx3dDimRadius, Mx3dGeAxis, Mx3dGeBndBox, Mx3dGeCSYS, Mx3dGeCSYSR, Mx3dGeCircle, Mx3dGeColor, Mx3dGeConic, Mx3dGeCurve, Mx3dGeCylinder, Mx3dGeDir, Mx3dGeEllipse, Mx3dGeHyperbola, Mx3dGeLine, Mx3dGeLocation, Mx3dGeMaterial, Mx3dGeObject, Mx3dGePlane, Mx3dGePoint, Mx3dGeTrsf, Mx3dGeVec, Mx3dGeomBSplineCurve, Mx3dGeomBSplineSurface, Mx3dGeomBezierCurve, Mx3dGeomBezierSurface, Mx3dGeomBoundedCurve, Mx3dGeomBoundedSurface, Mx3dGeomCircle, Mx3dGeomConic, Mx3dGeomConicalSurface, Mx3dGeomCurve, Mx3dGeomCylindricalSurface, Mx3dGeomElementarySurface, Mx3dGeomEllipse, Mx3dGeomHyperbola, Mx3dGeomLine, Mx3dGeomObject, Mx3dGeomParabola, Mx3dGeomPlane, Mx3dGeomSphericalSurface, Mx3dGeomSurface, Mx3dGeomToroidalSurface, Mx3dInterpolateBSplineCurve, Mx3dMkBox, Mx3dMkCone, Mx3dMkCylinder, Mx3dMkFace, Mx3dMkLoft, Mx3dMkObject, Mx3dMkPipe, Mx3dMkPolygon, Mx3dMkPrism, Mx3dMkRevol, Mx3dMkSphere, Mx3dMkThickSolid, Mx3dMkTorus, Mx3dMkWedge, Mx3dShapeCompSolid, Mx3dShapeCompound, Mx3dShapeDownCast, Mx3dShapeEdge, Mx3dShapeFace, Mx3dShapeObject, Mx3dShapeShell, Mx3dShapeSolid, Mx3dShapeVertex, Mx3dShapeWire, Mx3dSymbolObject, Mx3dSymbolText, Mx3dUtils, Mx3dView, Mx3dWireTool, MxApp3D, MxCAD3DObject, MxCADCloneType, MxCADPluginBase, MxCADPluginMapDefaultData, MxCADPluginSampleCode, MxCADResbuf, MxCADSelectionSet, MxCADSelectionSetStatus, MxCADUiPrAngle, MxCADUiPrBase, MxCADUiPrDist, MxCADUiPrEntity, MxCADUiPrInt, MxCADUiPrKeyWord, MxCADUiPrPoint, MxCADUiPrString, MxCADUtility, MxCADUtilityClass, MxCADWorldDraw, MxCheckTheBrowser, MxCompare, MxCoordConvert, MxCoordConvertType, MxCpp, MxCppType, MxMap, MxMapAddGoogleCnLayer, MxMapAddRasterTileLayer, MxPropertiesWindowCustom, MxPropertiesWindowCustomValue, MxPropertiesWindowCustomValueType, MxTools, Mx_Erase, _ML_String, b64Decode, b64Encode, createCursor, createMcCmColor, createMxCad, mxcad as default, downloadFile, downloadFileFromUrl, drawArc, drawCircle, drawEllipticalArc, drawLine, drawMText, drawPolyLine, drawPolygon, drawRectang, drawText, getColorUtils, getFileFromUrl, getFilterImp, getJsonFromUrl, loadMxCADassembly, mx_gcj02_To_gps84, mx_gps84_To_gcj02, postEmscriptenIndexedDBFile, postMemoryFile, saveAsFileDialog, setMcCmColor };
+=======
 export { ColorIndexType, ColorMethod, DxfCode, FetchAttributes, IMcDbDwgFiler, IsZero, McAppType, McCmColor, McDb, McDb2LineAngularDimension, McDbAlignedDimension, McDbArc, McDbAttribute, McDbAttributeDefinition, McDbBackgroundEntity, McDbBlockReference, McDbBlockTable, McDbBlockTableRecord, McDbCircle, McDbCurve, McDbCustomEntity, McDbDatabase, McDbDictionary, McDbDimStyleTable, McDbDimStyleTableRecord, McDbDimension, McDbEllipse, McDbEntity, McDbGroup, McDbHatch, McDbLayerTable, McDbLayerTableRecord, McDbLine, McDbLinetypeTable, McDbLinetypeTableRecord, McDbMText, McDbObject, McDbObjectArray, McDbPoint, McDbPolyline, McDbProxyEntity, McDbRasterImage, McDbRasterImageDef, McDbRotatedDimension, McDbText, McDbTextStyleTable, McDbTextStyleTableRecord, McDbWipeout, McDbXrecord, McGeBound, McGeDoubleArray, McGeLongArray, McGeMatrix3d, McGePoint3d, McGePoint3dArray, McGeStringArray, McGeVector3d, McObject, McObjectId, McObjectIdType, McRxObject, MdGe, Mx3dAlgoChamfer, Mx3dAlgoFillet, Mx3dAlgoFillet2d, Mx3dAlgoObject, Mx3dApplication, Mx3dAspectArrow, Mx3dAspectDim, Mx3dAspectLine, Mx3dAspectObject, Mx3dAspectText, Mx3dBaseObject, Mx3dBrepCastGeom, Mx3dDbDocument, Mx3dDbLabel, Mx3dDbObject, Mx3dDimAngle, Mx3dDimDiameter, Mx3dDimLength, Mx3dDimObject, Mx3dDimRadius, Mx3dGeAxis, Mx3dGeBndBox, Mx3dGeCSYS, Mx3dGeCSYSR, Mx3dGeCircle, Mx3dGeColor, Mx3dGeConic, Mx3dGeCurve, Mx3dGeCylinder, Mx3dGeDir, Mx3dGeEllipse, Mx3dGeHyperbola, Mx3dGeLine, Mx3dGeLocation, Mx3dGeMaterial, Mx3dGeObject, Mx3dGePlane, Mx3dGePoint, Mx3dGeTrsf, Mx3dGeVec, Mx3dGeomBSplineCurve, Mx3dGeomBSplineSurface, Mx3dGeomBezierCurve, Mx3dGeomBezierSurface, Mx3dGeomBoundedCurve, Mx3dGeomBoundedSurface, Mx3dGeomCircle, Mx3dGeomConic, Mx3dGeomConicalSurface, Mx3dGeomCurve, Mx3dGeomCylindricalSurface, Mx3dGeomElementarySurface, Mx3dGeomEllipse, Mx3dGeomHyperbola, Mx3dGeomLine, Mx3dGeomObject, Mx3dGeomParabola, Mx3dGeomPlane, Mx3dGeomSphericalSurface, Mx3dGeomSurface, Mx3dGeomToroidalSurface, Mx3dInterpolateBSplineCurve, Mx3dMkBox, Mx3dMkCone, Mx3dMkCylinder, Mx3dMkFace, Mx3dMkLoft, Mx3dMkObject, Mx3dMkPipe, Mx3dMkPolygon, Mx3dMkPrism, Mx3dMkRevol, Mx3dMkSphere, Mx3dMkThickSolid, Mx3dMkTorus, Mx3dMkWedge, Mx3dShapeCompSolid, Mx3dShapeCompound, Mx3dShapeDownCast, Mx3dShapeEdge, Mx3dShapeFace, Mx3dShapeObject, Mx3dShapeShell, Mx3dShapeSolid, Mx3dShapeVertex, Mx3dShapeWire, Mx3dSymbolObject, Mx3dSymbolText, Mx3dUtils, Mx3dView, Mx3dWireTool, MxApp3D, MxCAD3DObject, MxCADCloneType, MxCADPluginBase, MxCADPluginMapDefaultData, MxCADPluginSampleCode, MxCADResbuf, MxCADSelectionSet, MxCADSelectionSetStatus, MxCADUiPrAngle, MxCADUiPrBase, MxCADUiPrDist, MxCADUiPrEntity, MxCADUiPrInt, MxCADUiPrKeyWord, MxCADUiPrPoint, MxCADUiPrString, MxCADUtility, MxCADUtilityClass, MxCADWorldDraw, MxCheckTheBrowser, MxCompare, MxCoordConvert, MxCoordConvertType, MxCpp, MxCppType, MxMap, MxMapAddGoogleCnLayer, MxMapAddRasterTileLayer, MxPropertiesWindowCustom, MxPropertiesWindowCustomValue, MxPropertiesWindowCustomValueType, MxTools, Mx_Erase, _ML_String, b64Decode, b64Encode, createMcCmColor, createMxCad, mxcad as default, downloadFile, downloadFileFromUrl, drawArc, drawCircle, drawEllipticalArc, drawLine, drawMText, drawPolyLine, drawPolygon, drawRectang, drawText, getColorUtils, getFileFromUrl, getFilterImp, getJsonFromUrl, loadMxCADassembly, mx_gcj02_To_gps84, mx_gps84_To_gcj02, postEmscriptenIndexedDBFile, postMemoryFile, saveAsFileDialog, setMcCmColor };
+>>>>>>> 336a3932e80ac24ad804265e40f4ad4d62d3927c

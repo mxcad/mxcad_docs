@@ -12,12 +12,21 @@
     <script>
         const { MxFun, loadCoreCode } = Mx
         const { createMxCad } = MxCAD
+<<<<<<< HEAD
+        window.onload = function () {
+            createMxCad({
+                canvas: "#myCanvas",
+                locateFile: (fileName) => "https://unpkg.com/mxcad/dist/wasm/2d-st/" + fileName,
+                fontspath: "https://unpkg.com/mxcad/dist/fonts/",
+                fileUrl: "./public/test2.mxweb"
+=======
         window.onload = function() {
             createMxCad({
                 canvas: "#myCanvas",
                 locateFile: (fileName)=> "https://unpkg.com/mxcad/dist/wasm/2d-st/" + fileName,
                 fontspath: "https://unpkg.com/mxcad/dist/fonts/",
                 fileUrl: "../public/test2.mxweb"
+>>>>>>> 336a3932e80ac24ad804265e40f4ad4d62d3927c
             })
         }
     </script>

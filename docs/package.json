@@ -1,6 +1,11 @@
 {
     "scripts": {
         "dev": "node typedoc.js && vitepress dev",
+<<<<<<< HEAD
+        "build": "node typedoc.js && vitepress build",
+        "preview": "npx vitepress preview"
+=======
         "build": "node typedoc.js && vitepress build"
+>>>>>>> 336a3932e80ac24ad804265e40f4ad4d62d3927c
     }
 }
