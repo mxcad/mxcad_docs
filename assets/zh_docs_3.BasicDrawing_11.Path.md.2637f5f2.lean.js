@@ -1,0 +1,104 @@
+import{_ as p,H as o,o as c,c as r,J as a,E as n,V as F,C as s,a as l}from"./chunks/framework.24f0af87.js";const E=JSON.parse('{"title":"路径","description":"","frontmatter":{},"headers":[],"relativePath":"zh/docs/3.BasicDrawing/11.Path.md","filePath":"zh/docs/3.BasicDrawing/11.Path.md"}'),y={name:"zh/docs/3.BasicDrawing/11.Path.md"},D=F("",6),C=s("div",{class:"language-tsx"},[s("button",{title:"Copy Code",class:"copy"}),s("span",{class:"lang"},"tsx"),s("pre",{class:"shiki material-theme-palenight"},[s("code",null,[s("span",{class:"line"},[s("span",{style:{color:"#89DDFF","font-style":"italic"}},"import"),s("span",{style:{color:"#A6ACCD"}}," "),s("span",{style:{color:"#89DDFF"}},"{"),s("span",{style:{color:"#F07178"}},"  "),s("span",{style:{color:"#A6ACCD"}},"McObject"),s("span",{style:{color:"#89DDFF"}},","),s("span",{style:{color:"#F07178"}}," "),s("span",{style:{color:"#A6ACCD"}},"McDbText"),s("span",{style:{color:"#89DDFF"}},","),s("span",{style:{color:"#F07178"}}," "),s("span",{style:{color:"#A6ACCD"}},"McDbMText"),s("span",{style:{color:"#89DDFF"}},","),s("span",{style:{color:"#F07178"}}," "),s("span",{style:{color:"#A6ACCD"}},"McDb"),s("span",{style:{color:"#89DDFF"}},","),s("span",{style:{color:"#F07178"}}," "),s("span",{style:{color:"#A6ACCD"}},"McGePoint3d"),s("span",{style:{color:"#89DDFF"}},","),s("span",{style:{color:"#F07178"}}," "),s("span",{style:{color:"#A6ACCD"}},"McCmColor"),s("span",{style:{color:"#F07178"}}," "),s("span",{style:{color:"#89DDFF"}},"}"),s("span",{style:{color:"#A6ACCD"}}," "),s("span",{style:{color:"#89DDFF","font-style":"italic"}},"from"),s("span",{style:{color:"#A6ACCD"}}," "),s("span",{style:{color:"#89DDFF"}},'"'),s("span",{style:{color:"#C3E88D"}},"mxcad"),s("span",{style:{color:"#89DDFF"}},'"')]),l(`
+`),s("span",{class:"line"}),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#89DDFF","font-style":"italic"}},"export"),s("span",{style:{color:"#A6ACCD"}}," "),s("span",{style:{color:"#89DDFF","font-style":"italic"}},"default"),s("span",{style:{color:"#A6ACCD"}}," "),s("span",{style:{color:"#89DDFF"}},"()"),s("span",{style:{color:"#A6ACCD"}}," "),s("span",{style:{color:"#C792EA"}},"=>"),s("span",{style:{color:"#A6ACCD"}}," "),s("span",{style:{color:"#89DDFF"}},"{")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#F07178"}},"    "),s("span",{style:{color:"#C792EA"}},"const"),s("span",{style:{color:"#F07178"}}," "),s("span",{style:{color:"#A6ACCD"}},"mxcad"),s("span",{style:{color:"#F07178"}}," "),s("span",{style:{color:"#89DDFF"}},"="),s("span",{style:{color:"#F07178"}}," "),s("span",{style:{color:"#89DDFF"}},"new"),s("span",{style:{color:"#F07178"}}," "),s("span",{style:{color:"#82AAFF"}},"McObject"),s("span",{style:{color:"#F07178"}},"()")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#F07178"}},"    "),s("span",{style:{color:"#A6ACCD"}},"mxcad"),s("span",{style:{color:"#89DDFF"}},"."),s("span",{style:{color:"#82AAFF"}},"create"),s("span",{style:{color:"#F07178"}},"("),s("span",{style:{color:"#89DDFF"}},"{")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#F07178"}},"      canvas"),s("span",{style:{color:"#89DDFF"}},":"),s("span",{style:{color:"#F07178"}}," "),s("span",{style:{color:"#89DDFF"}},'"'),s("span",{style:{color:"#C3E88D"}},"#myCanvas"),s("span",{style:{color:"#89DDFF"}},'"'),s("span",{style:{color:"#89DDFF"}},",")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#F07178"}},"      "),s("span",{style:{color:"#82AAFF"}},"locateFile"),s("span",{style:{color:"#89DDFF"}},":"),s("span",{style:{color:"#F07178"}}," "),s("span",{style:{color:"#89DDFF"}},"("),s("span",{style:{color:"#A6ACCD","font-style":"italic"}},"fileName"),s("span",{style:{color:"#89DDFF"}},":"),s("span",{style:{color:"#F07178"}}," "),s("span",{style:{color:"#FFCB6B"}},"string"),s("span",{style:{color:"#89DDFF"}},")"),s("span",{style:{color:"#C792EA"}},"=>"),s("span",{style:{color:"#F07178"}}," "),s("span",{style:{color:"#89DDFF"}},"{")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#89DDFF"}},"            "),s("span",{style:{color:"#676E95","font-style":"italic"}},"// CDN 加载必须使用wasm/2d-st中的资源、因为github的限制无法使用wasm/2d 资源")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#89DDFF"}},"            "),s("span",{style:{color:"#676E95","font-style":"italic"}},"// 需要使用wasm/2d需要遵循浏览器同源策略或使用其他手段规避浏览器同源策略")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#F07178"}},"            "),s("span",{style:{color:"#89DDFF","font-style":"italic"}},"return"),s("span",{style:{color:"#F07178"}}," "),s("span",{style:{color:"#A6ACCD"}},"self"),s("span",{style:{color:"#89DDFF"}},"."),s("span",{style:{color:"#A6ACCD"}},"location"),s("span",{style:{color:"#89DDFF"}},"."),s("span",{style:{color:"#A6ACCD"}},"origin"),s("span",{style:{color:"#F07178"}}," "),s("span",{style:{color:"#89DDFF"}},"+"),s("span",{style:{color:"#F07178"}}," "),s("span",{style:{color:"#89DDFF"}},'"'),s("span",{style:{color:"#C3E88D"}},"/mxcad_docs/wasm/2d-st/"),s("span",{style:{color:"#89DDFF"}},'"'),s("span",{style:{color:"#F07178"}}," "),s("span",{style:{color:"#89DDFF"}},"+"),s("span",{style:{color:"#F07178"}}," "),s("span",{style:{color:"#A6ACCD"}},"fileName")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#F07178"}},"      "),s("span",{style:{color:"#89DDFF"}},"},")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#89DDFF"}},"      "),s("span",{style:{color:"#676E95","font-style":"italic"}},"// 加载字体的目录位置")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#F07178"}},"      fontspath"),s("span",{style:{color:"#89DDFF"}},":"),s("span",{style:{color:"#F07178"}}," "),s("span",{style:{color:"#A6ACCD"}},"self"),s("span",{style:{color:"#89DDFF"}},"."),s("span",{style:{color:"#A6ACCD"}},"location"),s("span",{style:{color:"#89DDFF"}},"."),s("span",{style:{color:"#A6ACCD"}},"origin"),s("span",{style:{color:"#F07178"}}," "),s("span",{style:{color:"#89DDFF"}},"+"),s("span",{style:{color:"#F07178"}}," "),s("span",{style:{color:"#89DDFF"}},'"'),s("span",{style:{color:"#C3E88D"}},"/mxcad_docs/fonts"),s("span",{style:{color:"#89DDFF"}},'"'),s("span",{style:{color:"#89DDFF"}},",")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#89DDFF"}},"      "),s("span",{style:{color:"#676E95","font-style":"italic"}},"// 加载转换后的图纸文件")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#F07178"}},"      fileUrl"),s("span",{style:{color:"#89DDFF"}},":"),s("span",{style:{color:"#F07178"}}," "),s("span",{style:{color:"#A6ACCD"}},"self"),s("span",{style:{color:"#89DDFF"}},"."),s("span",{style:{color:"#A6ACCD"}},"location"),s("span",{style:{color:"#89DDFF"}},"."),s("span",{style:{color:"#A6ACCD"}},"origin"),s("span",{style:{color:"#F07178"}}," "),s("span",{style:{color:"#89DDFF"}},"+"),s("span",{style:{color:"#F07178"}}," "),s("span",{style:{color:"#89DDFF"}},'"'),s("span",{style:{color:"#C3E88D"}},"/mxcad_docs/test.mxweb"),s("span",{style:{color:"#89DDFF"}},'"'),s("span",{style:{color:"#89DDFF"}},",")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#F07178"}},"      "),s("span",{style:{color:"#82AAFF"}},"onOpenFileComplete"),s("span",{style:{color:"#89DDFF"}},":"),s("span",{style:{color:"#F07178"}}," "),s("span",{style:{color:"#89DDFF"}},"()"),s("span",{style:{color:"#C792EA"}},"=>"),s("span",{style:{color:"#89DDFF"}},"{")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#89DDFF"}},"            "),s("span",{style:{color:"#676E95","font-style":"italic"}},"//用路径 绘制矩形框")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#89DDFF"}},"            "),s("span",{style:{color:"#676E95","font-style":"italic"}},"//定义一个路径的开始点")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#F07178"}},"            "),s("span",{style:{color:"#A6ACCD"}},"mxcad"),s("span",{style:{color:"#89DDFF"}},"."),s("span",{style:{color:"#82AAFF"}},"pathMoveTo"),s("span",{style:{color:"#F07178"}},"("),s("span",{style:{color:"#F78C6C"}},"0"),s("span",{style:{color:"#89DDFF"}},","),s("span",{style:{color:"#F07178"}}," "),s("span",{style:{color:"#F78C6C"}},"300"),s("span",{style:{color:"#F07178"}},")"),s("span",{style:{color:"#89DDFF"}},";")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#89DDFF"}},"            "),s("span",{style:{color:"#676E95","font-style":"italic"}},"//路径的一下个点")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#F07178"}},"            "),s("span",{style:{color:"#A6ACCD"}},"mxcad"),s("span",{style:{color:"#89DDFF"}},"."),s("span",{style:{color:"#82AAFF"}},"pathLineTo"),s("span",{style:{color:"#F07178"}},"("),s("span",{style:{color:"#F78C6C"}},"100"),s("span",{style:{color:"#89DDFF"}},","),s("span",{style:{color:"#F07178"}}," "),s("span",{style:{color:"#F78C6C"}},"300"),s("span",{style:{color:"#F07178"}},")"),s("span",{style:{color:"#89DDFF"}},";")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#89DDFF"}},"            "),s("span",{style:{color:"#676E95","font-style":"italic"}},"//路径的一下个点")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#F07178"}},"            "),s("span",{style:{color:"#A6ACCD"}},"mxcad"),s("span",{style:{color:"#89DDFF"}},"."),s("span",{style:{color:"#82AAFF"}},"pathLineTo"),s("span",{style:{color:"#F07178"}},"("),s("span",{style:{color:"#F78C6C"}},"100"),s("span",{style:{color:"#89DDFF"}},","),s("span",{style:{color:"#F07178"}}," "),s("span",{style:{color:"#F78C6C"}},"400"),s("span",{style:{color:"#F07178"}},")"),s("span",{style:{color:"#89DDFF"}},";")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#89DDFF"}},"            "),s("span",{style:{color:"#676E95","font-style":"italic"}},"//路径的一下个点")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#F07178"}},"            "),s("span",{style:{color:"#A6ACCD"}},"mxcad"),s("span",{style:{color:"#89DDFF"}},"."),s("span",{style:{color:"#82AAFF"}},"pathLineTo"),s("span",{style:{color:"#F07178"}},"("),s("span",{style:{color:"#F78C6C"}},"0"),s("span",{style:{color:"#89DDFF"}},","),s("span",{style:{color:"#F07178"}}," "),s("span",{style:{color:"#F78C6C"}},"400"),s("span",{style:{color:"#F07178"}},")"),s("span",{style:{color:"#89DDFF"}},";")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#89DDFF"}},"            "),s("span",{style:{color:"#676E95","font-style":"italic"}},"//把路径设置成闭合")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#F07178"}},"            "),s("span",{style:{color:"#A6ACCD"}},"mxcad"),s("span",{style:{color:"#89DDFF"}},"."),s("span",{style:{color:"#82AAFF"}},"pathMakeClosed"),s("span",{style:{color:"#F07178"}},"()"),s("span",{style:{color:"#89DDFF"}},";")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#89DDFF"}},"            "),s("span",{style:{color:"#676E95","font-style":"italic"}},"//生成一个矩形框的多义线")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#F07178"}},"            "),s("span",{style:{color:"#A6ACCD"}},"mxcad"),s("span",{style:{color:"#89DDFF"}},"."),s("span",{style:{color:"#82AAFF"}},"drawPathToPolyline"),s("span",{style:{color:"#F07178"}},"()"),s("span",{style:{color:"#89DDFF"}},";")]),l(`
+`),s("span",{class:"line"}),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#89DDFF"}},"            "),s("span",{style:{color:"#676E95","font-style":"italic"}},"//定义一个路径的开始点")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#F07178"}},"            "),s("span",{style:{color:"#A6ACCD"}},"mxcad"),s("span",{style:{color:"#89DDFF"}},"."),s("span",{style:{color:"#82AAFF"}},"pathMoveTo"),s("span",{style:{color:"#F07178"}},"("),s("span",{style:{color:"#F78C6C"}},"170"),s("span",{style:{color:"#89DDFF"}},","),s("span",{style:{color:"#F07178"}}," "),s("span",{style:{color:"#F78C6C"}},"320"),s("span",{style:{color:"#F07178"}},")")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#F07178"}},"            "),s("span",{style:{color:"#A6ACCD"}},"mxcad"),s("span",{style:{color:"#89DDFF"}},"."),s("span",{style:{color:"#82AAFF"}},"pathLineTo"),s("span",{style:{color:"#F07178"}},"("),s("span",{style:{color:"#F78C6C"}},"200"),s("span",{style:{color:"#89DDFF"}},","),s("span",{style:{color:"#F07178"}}," "),s("span",{style:{color:"#F78C6C"}},"320"),s("span",{style:{color:"#F07178"}},")")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#F07178"}},"            "),s("span",{style:{color:"#A6ACCD"}},"mxcad"),s("span",{style:{color:"#89DDFF"}},"."),s("span",{style:{color:"#82AAFF"}},"pathLineTo"),s("span",{style:{color:"#F07178"}},"("),s("span",{style:{color:"#F78C6C"}},"200"),s("span",{style:{color:"#89DDFF"}},","),s("span",{style:{color:"#F07178"}}," "),s("span",{style:{color:"#F78C6C"}},"340"),s("span",{style:{color:"#F07178"}},")")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#F07178"}},"            "),s("span",{style:{color:"#A6ACCD"}},"mxcad"),s("span",{style:{color:"#89DDFF"}},"."),s("span",{style:{color:"#82AAFF"}},"pathLineTo"),s("span",{style:{color:"#F07178"}},"("),s("span",{style:{color:"#F78C6C"}},"170"),s("span",{style:{color:"#89DDFF"}},","),s("span",{style:{color:"#F07178"}}," "),s("span",{style:{color:"#F78C6C"}},"340"),s("span",{style:{color:"#F07178"}},")")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#89DDFF"}},"            "),s("span",{style:{color:"#676E95","font-style":"italic"}},"// 把上面定义的路径定义填充排除区域.")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#F07178"}},"            "),s("span",{style:{color:"#A6ACCD"}},"mxcad"),s("span",{style:{color:"#89DDFF"}},"."),s("span",{style:{color:"#82AAFF"}},"pathMakeExclude"),s("span",{style:{color:"#F07178"}},"("),s("span",{style:{color:"#FF9CAC"}},"true"),s("span",{style:{color:"#F07178"}},")")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#F07178"}},"            "),s("span",{style:{color:"#A6ACCD"}},"mxcad"),s("span",{style:{color:"#89DDFF"}},"."),s("span",{style:{color:"#82AAFF"}},"pathMoveTo"),s("span",{style:{color:"#F07178"}},"("),s("span",{style:{color:"#F78C6C"}},"150"),s("span",{style:{color:"#89DDFF"}},","),s("span",{style:{color:"#F07178"}}," "),s("span",{style:{color:"#F78C6C"}},"300"),s("span",{style:{color:"#F07178"}},")")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#F07178"}},"            "),s("span",{style:{color:"#A6ACCD"}},"mxcad"),s("span",{style:{color:"#89DDFF"}},"."),s("span",{style:{color:"#82AAFF"}},"pathLineTo"),s("span",{style:{color:"#F07178"}},"("),s("span",{style:{color:"#F78C6C"}},"250"),s("span",{style:{color:"#89DDFF"}},","),s("span",{style:{color:"#F07178"}}," "),s("span",{style:{color:"#F78C6C"}},"300"),s("span",{style:{color:"#F07178"}},")")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#F07178"}},"            "),s("span",{style:{color:"#A6ACCD"}},"mxcad"),s("span",{style:{color:"#89DDFF"}},"."),s("span",{style:{color:"#82AAFF"}},"pathLineTo"),s("span",{style:{color:"#F07178"}},"("),s("span",{style:{color:"#F78C6C"}},"250"),s("span",{style:{color:"#89DDFF"}},","),s("span",{style:{color:"#F07178"}}," "),s("span",{style:{color:"#F78C6C"}},"400"),s("span",{style:{color:"#F07178"}},")")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#F07178"}},"            "),s("span",{style:{color:"#A6ACCD"}},"mxcad"),s("span",{style:{color:"#89DDFF"}},"."),s("span",{style:{color:"#82AAFF"}},"pathLineTo"),s("span",{style:{color:"#F07178"}},"("),s("span",{style:{color:"#F78C6C"}},"150"),s("span",{style:{color:"#89DDFF"}},","),s("span",{style:{color:"#F07178"}}," "),s("span",{style:{color:"#F78C6C"}},"400"),s("span",{style:{color:"#F07178"}},")")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#F07178"}},"            "),s("span",{style:{color:"#A6ACCD"}},"mxcad"),s("span",{style:{color:"#89DDFF"}},"."),s("span",{style:{color:"#82AAFF"}},"pathMakeClosed"),s("span",{style:{color:"#F07178"}},"()"),s("span",{style:{color:"#89DDFF"}},";")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#89DDFF"}},"            "),s("span",{style:{color:"#676E95","font-style":"italic"}},"// 将路径生成一个填充 这里的参数是图案缩放比例")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#F07178"}},"            "),s("span",{style:{color:"#A6ACCD"}},"mxcad"),s("span",{style:{color:"#89DDFF"}},"."),s("span",{style:{color:"#82AAFF"}},"drawPathToHatch"),s("span",{style:{color:"#F07178"}},"("),s("span",{style:{color:"#F78C6C"}},"1"),s("span",{style:{color:"#F07178"}},")"),s("span",{style:{color:"#89DDFF"}},";")]),l(`
+`),s("span",{class:"line"}),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#F07178"}},"            "),s("span",{style:{color:"#A6ACCD"}},"mxcad"),s("span",{style:{color:"#89DDFF"}},"."),s("span",{style:{color:"#82AAFF"}},"zoomAll"),s("span",{style:{color:"#F07178"}},"()"),s("span",{style:{color:"#89DDFF"}},";")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#F07178"}},"            "),s("span",{style:{color:"#A6ACCD"}},"mxcad"),s("span",{style:{color:"#89DDFF"}},"."),s("span",{style:{color:"#82AAFF"}},"zoomScale"),s("span",{style:{color:"#F07178"}},"("),s("span",{style:{color:"#F78C6C"}},"0.8"),s("span",{style:{color:"#F07178"}},")")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#F07178"}},"      "),s("span",{style:{color:"#89DDFF"}},"}")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#F07178"}},"    "),s("span",{style:{color:"#89DDFF"}},"}"),s("span",{style:{color:"#F07178"}},")")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#F07178"}},"    "),s("span",{style:{color:"#89DDFF","font-style":"italic"}},"return"),s("span",{style:{color:"#F07178"}}," ("),s("span",{style:{color:"#89DDFF"}},"<"),s("span",{style:{color:"#F07178"}},"div"),s("span",{style:{color:"#89DDFF"}}," "),s("span",{style:{color:"#C792EA"}},"style"),s("span",{style:{color:"#89DDFF"}},"="),s("span",{style:{color:"#89DDFF"}},'"'),s("span",{style:{color:"#C3E88D"}},"height: 500px; overflow: hidden;"),s("span",{style:{color:"#89DDFF"}},'"'),s("span",{style:{color:"#89DDFF"}},"><"),s("span",{style:{color:"#F07178"}},"canvas"),s("span",{style:{color:"#89DDFF"}}," "),s("span",{style:{color:"#C792EA"}},"id"),s("span",{style:{color:"#89DDFF"}},"="),s("span",{style:{color:"#89DDFF"}},'"'),s("span",{style:{color:"#C3E88D"}},"myCanvas"),s("span",{style:{color:"#89DDFF"}},'"'),s("span",{style:{color:"#89DDFF"}}," ></"),s("span",{style:{color:"#F07178"}},"canvas"),s("span",{style:{color:"#89DDFF"}},">")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#A6ACCD"}},"    "),s("span",{style:{color:"#89DDFF"}},"</"),s("span",{style:{color:"#F07178"}},"div"),s("span",{style:{color:"#89DDFF"}},">"),s("span",{style:{color:"#F07178"}},")")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#89DDFF"}},"}")])])])],-1);function i(A,d,m,h,x,f){const e=o("demo"),t=o("clientOnly");return c(),r("div",null,[D,a(t,null,{default:n(()=>[a(e,{"initial-value":`import {  McObject, McDbText, McDbMText, McDb, McGePoint3d, McCmColor } from "mxcad"
+
+export default () => {
+    const mxcad = new McObject()
+    mxcad.create({
+      canvas: "#myCanvas",
+      locateFile: (fileName: string)=> {
+            // CDN 加载必须使用wasm/2d-st中的资源、因为github的限制无法使用wasm/2d 资源
+            // 需要使用wasm/2d需要遵循浏览器同源策略或使用其他手段规避浏览器同源策略
+            return self.location.origin + "/mxcad_docs/wasm/2d-st/" + fileName
+      },
+      // 加载字体的目录位置
+      fontspath: self.location.origin + "/mxcad_docs/fonts",
+      // 加载转换后的图纸文件
+      fileUrl: self.location.origin + "/mxcad_docs/test.mxweb",
+      onOpenFileComplete: ()=>{
+            //用路径 绘制矩形框
+            //定义一个路径的开始点
+            mxcad.pathMoveTo(0, 300);
+            //路径的一下个点
+            mxcad.pathLineTo(100, 300);
+            //路径的一下个点
+            mxcad.pathLineTo(100, 400);
+            //路径的一下个点
+            mxcad.pathLineTo(0, 400);
+            //把路径设置成闭合
+            mxcad.pathMakeClosed();
+            //生成一个矩形框的多义线
+            mxcad.drawPathToPolyline();
+
+            //定义一个路径的开始点
+            mxcad.pathMoveTo(170, 320)
+            mxcad.pathLineTo(200, 320)
+            mxcad.pathLineTo(200, 340)
+            mxcad.pathLineTo(170, 340)
+            // 把上面定义的路径定义填充排除区域.
+            mxcad.pathMakeExclude(true)
+            mxcad.pathMoveTo(150, 300)
+            mxcad.pathLineTo(250, 300)
+            mxcad.pathLineTo(250, 400)
+            mxcad.pathLineTo(150, 400)
+            mxcad.pathMakeClosed();
+            // 将路径生成一个填充 这里的参数是图案缩放比例
+            mxcad.drawPathToHatch(1);
+
+            mxcad.zoomAll();
+            mxcad.zoomScale(0.8)
+      }
+    })
+    return (<div style="height: 500px; overflow: hidden;"><canvas id="myCanvas" ></canvas>
+    </div>)
+}
+`,direction:"",lang:"tsx",height:"undefined"},{default:n(()=>[C]),_:1})]),_:1})])}const _=p(y,[["render",i]]);export{E as __pageData,_ as default};
