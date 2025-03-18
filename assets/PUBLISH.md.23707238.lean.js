@@ -1,1 +1,0 @@
-import{_ as s,o as a,c as e,V as t}from"./chunks/framework.24f0af87.js";const y=JSON.parse('{"title":"mxcad 文档自动部署","description":"","frontmatter":{},"headers":[],"relativePath":"PUBLISH.md","filePath":"PUBLISH.md"}'),n={name:"PUBLISH.md"},l=t("",17),o=[l];function r(p,c,i,h,d,m){return a(),e("div",null,o)}const _=s(n,[["render",r]]);export{y as __pageData,_ as default};

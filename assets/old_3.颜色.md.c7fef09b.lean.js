@@ -1,0 +1,1 @@
+import{_ as o,o as e,c,V as d}from"./chunks/framework.493c336a.js";const i=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"__old/3.颜色.md","filePath":"__old/3.颜色.md"}'),t={name:"__old/3.颜色.md"},r=d("",5),a=[r];function l(m,_,C,s,h,n){return e(),c("div",null,a)}const M=o(t,[["render",l]]);export{i as __pageData,M as default};
