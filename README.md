@@ -1,19 +1,18 @@
+# Quick Start
 
-# 快速入门
+> MxCAD must be used together with MxDraw. If you are not familiar with the MxDraw library, please refer to: <https://mxcadx.gitee.io/mxdraw_docs/>
 
-> mxcad必须和mxdraw一起使用 如果你不了解mxdraw库 请参考：<https://mxcadx.gitee.io/mxdraw_docs/>
-
-> 联系方式: 710714273@qq.com
+> Contact information: 710714273@qq.com
 
 ![](https://www.webcadsdk.com/img/WX-Two-dimensional-code.png)
 
-## 安装
+## Installation
 
 ### CDN
 
 ```html
-<script scr="https://unpkg.com/mxdraw/dist/mxdraw.umd.js" ></script>
-<script scr="https://unpkg.com/mxcad/dist/mxcad.umd.js"></script>
+<script src="https://unpkg.com/mxdraw/dist/mxdraw.umd.js" ></script>
+<script src="https://unpkg.com/mxcad/dist/mxcad.umd.js"></script>
 ```
 
 ### NPM
@@ -22,15 +21,15 @@
 npm install mxdraw mxcad
 ```
 
-## 基本用法
+## Basic Usage
 
-::: tip 重要提示
+::: tip Important Notice
 
-因为mxcad默认使用了`SharedArrayBuffer`
-需要在服务端设置相应对应的响应头:
+Since MxCAD uses `SharedArrayBuffer` by default,
+the corresponding response headers need to be set on the server side:
 
 ```js
-// nodejs 为例
+// Take Node.js as an example
 const http = require('http');
 http.createServer((req, res)=> {
     res.setHeader("Cross-Origin-Opener-Policy", "same-origin");
@@ -41,13 +40,13 @@ http.createServer((req, res)=> {
 
 :::
 
-需要canvas元素
+A canvas element is required.
 
 ```html
 <div style="height: 600px; overflow: hidden;"> <canvas id="myCanvas"></canvas></div>
 ```
 
-推荐使用vite作为构建工具
+It is recommended to use Vite as the build tool.
 
 ```ts
 import { createMxCad } from "mxcad"
@@ -56,20 +55,20 @@ createMxCad({
     locateFile: (fileName)=> new URL(`/node_modules/mxcad/dist/wasm/2d/${fileName}`, import.meta.url).href,
     fileUrl: new URL("../assets/test.mxweb", import.meta.url).href
 }).then((mxcad)=> {
-    // 我想换一个文件显示?
+    // I want to display a different file?
     mxcad.openWebFile(new URL("../assets/test2.mxweb", import.meta.url).href)
-    // 我想保存我修改后的文件？
-    // (你可以在dom元素事件函数中调用，这样可以使用一些最新的浏览器特性保存文件)
+    // I want to save the file after my modification?
+    // (You can call it in the DOM element event function, so that you can use some of the latest browser features to save the file)
     mxcad.saveFile()
 })
 ```
 
-## 示例参考
+## Example References
 
-在git中查看示例 [github](https://github.com/mxcad/mxcad_docs/tree/master/examples)
+Check the examples on Git [github](https://github.com/mxcad/mxcad_docs/tree/master/examples)
 | [gitee](https://gitee.com/mxcadx/mxcad_docs/tree/master/examples)
 
-或者通过 执行以下命令查看所有实例
+Or view all examples by executing the following commands:
 
 ```sh
 git clone https://github.com/mxcad/mxcad_docs
@@ -79,17 +78,17 @@ pnpm install
 pnpm run -r dev
 ```
 
-你还可以通过[演练场](#演练场)在线编辑修改代码查看运行后的效果
+You can also edit and modify the code online through the [Playground](#Playground) to see the effect after running.
 
-## 在vite中使用
+## Usage in Vite
 
-1.安装vite
+1. Install Vite
 
 ```sh
 npm install vite -D
 ```
 
-2.在项目根目录新建html文件
+2. Create a new HTML file in the root directory of the project
 
 ```html
 <!DOCTYPE html>
@@ -107,7 +106,7 @@ npm install vite -D
 </html>
 ```
 
-3.在根目录下新建`src`目录 在`src`目录下新建`index.ts`文件（vite默认支持ts）代码如下:
+3. Create a new `src` directory in the root directory, and create a new `index.ts` file in the `src` directory (Vite supports TypeScript by default). The code is as follows:
 
 ```ts
 import { createMxCad } from "mxcad"
@@ -121,9 +120,9 @@ createMxCad({
 
 ```
 
-4.在`src`目录下创建`assets`并复制`test.mxweb`文件到该目录下
+4. Create an `assets` directory in the `src` directory and copy the `test.mxweb` file to this directory.
 
-5.在根目录下创建`vite.config.ts`文件
+5. Create a `vite.config.ts` file in the root directory
 
 ```ts
 import { defineConfig } from "vite"
@@ -138,25 +137,25 @@ export default defineConfig({
 })
 ```
 
-6.完成以上步骤在根目录执行如下命令
+6. After completing the above steps, execute the following command in the root directory
 
 ```sh
 npx vite
 ```
 
-## 在webpack中使用
+## Usage in Webpack
 
-1.安装
+1. Install
 
 ```sh
 npm install webpack webpack-cli copy-webpack-plugin@5 -D
 ```
 
-2.在根目录下创建`webpack.config.js`文件
+2. Create a `webpack.config.js` file in the root directory
 
 ```js
 const path = require('path');
-// copy-webpack-plugin@5 兼容webpack4和5的版本请放心使用
+// copy-webpack-plugin@5 is compatible with both Webpack 4 and 5 versions, so feel free to use it.
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
@@ -175,13 +174,13 @@ module.exports = {
   },
   plugins: [
     new CopyWebpackPlugin([
-      // 拷贝mxcad wasm 相关的核心代码 mxcad默认请求的路径是 /* 所有 需要把文件放dist2d下
+      // Copy the core code related to MxCAD WASM. The default request path of MxCAD is /*, so the files need to be placed in the dist2d directory.
       {
         from: "node_modules/mxcad/dist/wasm/2d/*",
         to: path.resolve(__dirname, "dist"),
         flatten: true
       },
-      // 必须要字体文件来显示图纸中的文字，mxcad库默认请求URL路径为 /fonts/* 所有需要放在dist/fonts下
+      // Font files are necessary to display the text in the drawings. The default requested URL path of the MxCAD library is /fonts/*, so they need to be placed in the dist/fonts directory.
       {
         from: "node_modules/mxcad/dist/fonts",
         to: path.resolve(__dirname, "dist/fonts"),
@@ -190,21 +189,21 @@ module.exports = {
       },
     ])
   ],
-  // mxcad 和 mxdraw库的js代码打包超过webpack默认限制的大小，需要设置hints: false关闭警告
+  // The packaged JavaScript code of the MxCAD and MxDraw libraries exceeds the default size limit of Webpack, and you need to set hints: false to turn off the warning.
   performance: {
     hints: false,
   }
 };
 ```
 
-3.在根目录新建`index.html`文件
+3. Create a new `index.html` file in the root directory
 
 ```html
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>起步</title>
+    <title>Getting Started</title>
     <script src="https://unpkg.com/lodash@4.17.20"></script>
   </head>
   <body>
@@ -214,21 +213,21 @@ module.exports = {
 </html>
 ```
 
-4.在根目录新建`src`目录 并在`src`目录下新建`index.js`文件
+4. Create a new `src` directory in the root directory, and create a new `index.js` file in the `src` directory
 
 ```js
 createMxCad({
     canvas: "#myCanvas",
-    // 通过需要访问：http:xxx.com/test.mxweb 获取对应的文件
-    // 请你自行提供该文件
+    // Get the corresponding file by accessing: http:xxx.com/test.mxweb
+    // Please provide this file by yourself.
     fileUrl: "test.mxweb"
 })
 ```
 
-5.完成上述步骤执行`npx webpack serve`命令运行查看效果
+5. After completing the above steps, execute the `npx webpack serve` command to run and view the effect.
 
 
-## 在h5中直接使用
+## Direct Usage in H5
 
 ```html
 <!DOCTYPE html>
@@ -250,21 +249,21 @@ createMxCad({
                 canvas: "#myCanvas",
                 locateFile(fileName) {
                     /***
-                     * 你可以不设置locateFile属性，
-                     * 默认通过该https://unpkg.com CDN加载或者无法使用SharedArrayBuffer的情况
-                     * mxcad会自动引入2d-st的资源
-                     * 2d与2d-st的区别就是2d-st未使用worker多线程优化，
-                     * 导致在打开图纸时会阻塞js线程导致打开图纸过程中页面卡死的情况
-                     * 推荐使用2d wasm资源，你需要在服务器设置响应头：
+                     * You can not set the locateFile property.
+                     * By default, it is loaded via the https://unpkg.com CDN, or in the case where SharedArrayBuffer cannot be used,
+                     * MxCAD will automatically introduce the 2d-st resources.
+                     * The difference between 2d and 2d-st is that 2d-st does not use worker multithreading optimization,
+                     * which will cause the JavaScript thread to be blocked when opening the drawing, resulting in the page freezing during the process of opening the drawing.
+                     * It is recommended to use the 2d WASM resources. You need to set the response headers on the server:
                      * "Cross-Origin-Opener-Policy": "same-origin",
                      * "Cross-Origin-Embedder-Policy": "require-corp"
                      * 
-                     * 并对于2d wasm资源遵从浏览器同源策略
-                     * (也就是说 locateFile返回的url需要是和自己的服务器域名相同的域名端口才行)
+                     * And comply with the browser's same-origin policy for 2d WASM resources.
+                     * (That is to say, the URL returned by locateFile needs to be the same domain name and port as your own server's domain name.)
                      * */
                     return "https://unpkg.com/mxcad/dist/wasm/2d-st/" + fileName
                 },
-                // 请自行在静态服务器上添加test.mxweb文件 如http://xxx.com/test.mxweb
+                // Please add the test.mxweb file to the static server by yourself, such as http://xxx.com/test.mxweb
                 fileUrl: "test.mxweb"
             })
         }
@@ -279,12 +278,12 @@ createMxCad({
 ```
 
 
-## createMxCad 的实现
+## Implementation of createMxCad
 
 ```tsx
-// 这是createMxCad 实现的大致代码
-// 如果你希望整个创建过程是透明公开的,
-// 你可以不使用createMxCad 而是使用下面的代码自行创建
+// This is the approximate code for the implementation of createMxCad.
+// If you want the entire creation process to be transparent and public,
+// you can not use createMxCad but use the following code to create it yourself.
 import { MxFun, loadCoreCode } from "mxdraw";
 import { loadMxCADassembly } from "mxcad"
 export default () => {
@@ -312,8 +311,8 @@ export default () => {
         }
         ,
         (fileName: string)=> {
-            // CDN 加载必须使用wasm/2d-st中的资源、因为github的限制无法使用wasm/2d 资源
-            // 需要使用wasm/2d需要遵循浏览器同源策略或使用其他手段规避浏览器同源策略
+            // When loading via CDN, the resources in wasm/2d-st must be used. Due to the limitations of GitHub, the wasm/2d resources cannot be used.
+            // To use the wasm/2d resources, you need to follow the browser's same-origin policy or use other means to bypass the browser's same-origin policy.
             return "https://unpkg.com/mxcad/dist/wasm/2d-st/" + fileName
         }),
     )
@@ -321,5 +320,4 @@ export default () => {
 }
 
 
-```
-
+``` 
