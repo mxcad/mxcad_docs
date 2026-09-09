@@ -26,6 +26,7 @@ import { getJsonFromUrl } from "mxcad"
 - [\_ML\_String](tools.md#_ml_string)
 - [b64Decode](tools.md#b64decode)
 - [b64Encode](tools.md#b64encode)
+- [copyMcDbEntityProperties](tools.md#copymcdbentityproperties)
 - [crateHexString](tools.md#cratehexstring)
 - [createCursor](tools.md#createcursor)
 - [createMdGeLongLongArrayFormAryId](tools.md#createmdgelonglongarrayformaryid)
@@ -51,6 +52,7 @@ import { getJsonFromUrl } from "mxcad"
 | `_ML_String` | (`strId`: `string`, `str`: `string`) => `string` |
 | `b64Decode` | (`str`: `string`) => `string` |
 | `b64Encode` | (`str`: `string`) => `string` |
+| `copyMcDbEntityProperties` | (`fromEnt`: [`McDbEntity`](../classes/2d.McDbEntity.md), `toEnt`: [`McDbEntity`](../classes/2d.McDbEntity.md)) => `void` |
 | `createCursor` | (`cursorSize`: `number`, `targetFrameSize`: `number`, `color`: `string`) => `any` |
 | `createMdGeLongLongArrayFormAryId` | (`aryId`: [`McObjectId`](../classes/2d.McObjectId.md)[]) => `any` |
 | `downloadFile` | (`blob`: `any`, `filename`: `string`) => `void` |
@@ -142,6 +144,30 @@ Base64 encoding
 
 ___
 
+### copyMcDbEntityProperties
+
+▸ **copyMcDbEntityProperties**(`fromEnt`, `toEnt`): `void`
+
+Copy the properties of one McDbEntity object to another McDbEntity object
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+|From Ent | [McDbEntity] (../classes/2d. McDbEntity. md) | Source McDbEntity object|
+|ToEnt | [McDbEntity] (../classes/2d. McDbEntity. md) | Target McDbEntity object|
+
+#### Returns
+
+`void`
+
+**`Description`**
+
+This function copies the layer, linetype, linetype scale, lineweight, true color, and text style attributes of the source object to the target object.
+This function is mainly used for batch copying object properties in MxCAD, in order to quickly create new objects with the same properties.
+
+___
+
 ### crateHexString
 
 ▸ **crateHexString**(`str`): `string`
@@ -158,23 +184,35 @@ Convert string to hexadecimal format for editing
 
 `string`
 
+Hexadecimal string
+
+**`String`**
+
+Str target string
+
 ___
 
 ### createCursor
 
 ▸ **createCursor**(`cursorSize?`, `targetFrameSize?`, `color?`): `any`
 
+Create a custom mouse cursor object
+
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `cursorSize` | `number` | `128` |
-| `targetFrameSize` | `number` | `10` |
-| `color` | `string` | `"#ffffff"` |
+| Name | Type | Default value | Description |
+| :------ | :------ | :------ | :------ |
+|CursorSize | Number | 128 | Mouse Size|
+|TargetFrameSize | number | 10 | Target box size|
+|Color | string | "# ffffff" | cursor color|
 
 #### Returns
 
 `any`
+
+**`Description`**
+
+This function will generate an object containing different types of cursor based on the passed parameters, including rectangle, cross, normal, and grab cursor.
 
 ___
 
@@ -182,15 +220,41 @@ ___
 
 ▸ **createMdGeLongLongArrayFormAryId**(`aryId`): `any`
 
+Create an MdGeLongLongArray object and add the id value from the passed McObjectid array to the object.
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `aryId` | [`McObjectId`](../classes/2d.McObjectId.md)[] |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+|AryId | [McObject Id] (../classes/2d. McObject Id. md) [] | McObject Id array|
 
 #### Returns
 
 `any`
+
+MdGeLongLongArray object
+
+**`Description`**
+
+This function will create a new MdGeLongLongArray object and iterate through the passed McObjectid array, adding the ID value of each object to MdGeLongLongArray.
+This function is mainly used to process a set of object IDs in MxCAD for batch operations or to pass to other functions for use.
+
+**`Example`**
+
+```ts
+import { MxCADUtility, MxCADResbuf, MxCpp } from "mxdraw";
+//Select multiple objects and merge them
+   async function Mx_Join() {
+     let filter = new MxCADResbuf();
+     filter.AddMcDbEntityTypes("LWPOLYLINE,ARC,LINE");
+Let aryId=await MxCADUtility. userSelect ("Select objects to merge", filter);
+     if (aryId.length == 0) {
+       return;
+     }
+     
+     MxCpp.App.MxCADAssist.MxJoin(createMdGeLongLongArrayFormAryId(aryId));
+   }
+```
 
 ___
 
@@ -319,7 +383,7 @@ ___
 
 ▸ **saveAsFileDialog**(`«destructured»`): [`Promise`]( https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise )\<`undefined` \| ``false`` \| [`FileSystemFileHandle`]( https://developer.mozilla.org/docs/Web/API/FileSystemFileHandle ) & \{ `createWritable`: () => [`Promise`]( https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise )\<[`WritableStreamDefaultWriter`]( https://developer.mozilla.org/docs/Web/API/WritableStreamDefaultWriter )\<`any`\>\>  }\>
 
-File download and save (save as only compatible with Chrome 86, Edge 86, and Opera 72) compatible with lower versions of browsers such as iE10
+File download save popup (save as only supports Chrome 86 or Edge 86 and Opera 72) compatible with lower versions of browsers such as iE10
 
 #### Parameters
 
@@ -333,3 +397,43 @@ File download and save (save as only compatible with Chrome 86, Edge 86, and Ope
 #### Returns
 
 [`Promise`]( https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise )\<`undefined` \| ``false`` \| [`FileSystemFileHandle`]( https://developer.mozilla.org/docs/Web/API/FileSystemFileHandle ) & \{ `createWritable`: () => [`Promise`]( https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise )\<[`WritableStreamDefaultWriter`]( https://developer.mozilla.org/docs/Web/API/WritableStreamDefaultWriter )\<`any`\>\>  }\>
+
+**`Example`**
+
+```ts
+//Export DWG file
+   import { MxCpp, MxTools } from "mxcad";
+
+   async function Mx_Export_DWG() {
+       const baseUrl = "http://localhost:1337";
+       const mxfilepath = "/mxcad/file/";
+       const saveDwgUrl = baseUrl + "/mxcad/savedwg";
+//Save the MXWeb file to the server, convert it to a DWG file, and then download it.
+       MxCpp.getCurrentMxCAD().saveFileToUrl(saveDwgUrl, (iResult: number, sserverResult: string) => {
+           try {
+               let ret = JSON.parse(sserverResult);
+               if (ret.ret == "ok") {
+                   let filePath = baseUrl + mxfilepath + ret.file;
+                   fetch(filePath).then(async (res) => {
+                       const blob = await res.blob()
+                       MxTools.saveAsFileDialog({
+                           blob,
+                           filename: ret.file,
+                           types: [{
+Description: "DWG drawings",
+                               accept: {
+                                   "application/octet-stream": [".dwg"],
+                               },
+                           }]
+                       })
+                   })
+               }
+               else {
+                   console.log(sserverResult);
+               }
+           } catch {
+               console.log("Mx: sserverResult error");
+           }
+       });
+   };
+```

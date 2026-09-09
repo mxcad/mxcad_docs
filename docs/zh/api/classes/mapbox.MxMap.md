@@ -4,14 +4,26 @@
 
 [mapbox](../modules/mapbox.md).MxMap
 
-cad地图对象
+Mapbox 地图与 CAD 坐标系统桥接类，用于将地图坐标和 CAD 绘图坐标相互转换。
 
-**`Example`**
+**`Description`**
 
-```ts
-import { MxMap } from 'mxcad';
-let mx_map = new MxMap;
-```
+MxMap 是一个用于连接 Mapbox 地图和 MxCAD/AutoCAD 坐标体系的桥接对象，主要用于在地理地图场景中与 CAD 图纸协同工作。
+它能够完成：
+- 绑定 Mapbox map 实例；
+- 在经纬度、墨卡托坐标和 CAD 坐标之间进行转换；
+- 处理地图缩放和 CAD 坐标系的对齐；
+- 通过 create() 方法生成地图自定义图层并接入 CAD 渲染环境；
+- 适配旧版和新版地图创建方式。
+
+使用方式：
+1. 实例化 MxMap，并可选择传入已有的 McObject；
+2. 调用 setCoordinatePointAlignment() 设置地图原点和 CAD 原点关系；
+3. 通过 initMapbox() 绑定 mapbox 实例；
+4. 调用 create(map, config) 启动地图与 CAD 的集成渲染；
+5. 使用 lnglatToCAD()、mercatorCoord2CAD() 等方法执行坐标转换。
+
+总结：MxMap 是连接地图地理坐标与 CAD 绘图坐标的核心工具，适合做地理信息、地图定位、测绘数据与工程图协同展示场景。
 
 ## Table of contents
 

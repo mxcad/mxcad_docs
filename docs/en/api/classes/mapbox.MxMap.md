@@ -4,14 +4,26 @@
 
 [mapbox](../modules/mapbox.md).MxMap
 
-CAD map object
+Mapbox map and CAD coordinate system bridging class, used to convert map coordinates and CAD drawing coordinates to each other.
 
-**`Example`**
+**`Description`**
 
-```ts
-import { MxMap } from 'mxcad';
-let mx_map = new MxMap;
-```
+MxMap is a bridging object used to connect Mapbox maps and MxCAD/AutoCAD coordinate systems, mainly used for collaborative work with CAD drawings in geographic map scenes.
+It is capable of completing:
+-Bind Mapbox map instance;
+-Convert between latitude and longitude, Mercator coordinates, and CAD coordinates;
+-Handling map scaling and aligning CAD coordinate systems;
+-Generate custom map layers using the creat() method and integrate them into the CAD rendering environment;
+-Adapt to the creation methods of old and new versions of maps.
+
+Usage:
+1. Instantiate MxMap and choose to pass in an existing McObject;
+2. Call setCoordinatePointAlign() to set the relationship between the map origin and CAD origin;
+3. Bind the mapbox instance through initMapbox();
+4. Call create (map, config) to start the integrated rendering of the map and CAD;
+5. Use methods such as lnglatToCAD() and mercatorCoord2CAD() to perform coordinate transformation.
+
+Summary: MxMap is a core tool that connects map geographic coordinates with CAD drawing coordinates, suitable for collaborative display scenarios of geographic information, map positioning, surveying data, and engineering drawings.
 
 ## Table of contents
 

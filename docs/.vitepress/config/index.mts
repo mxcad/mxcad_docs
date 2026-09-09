@@ -28,6 +28,9 @@ enum EnToZhDict {
     "Block" = "图块",
     "Image" = "图片",
     "Spline" = "样条线",
+    "Region" = "面域",
+    "Ray" = "射线",
+    "Xline" = "构造线",
     "InteractiveDrawing" = "交互绘图",
     "CommandLine" = "命令行",
     "UIInteraction" = "UI交互",
@@ -116,6 +119,9 @@ enum EnToZhDict {
     "Detailed Explanation of MxServiceCode" = "MxServiceCode详解",
     "MxCADFunctionIntroduction" = "MxCAD功能介绍",
     "Professional CAD in the browser" = "浏览器中的专业CAD",
+    "Object Snap(OSMODE)" = "对象捕捉(OSMODE)",
+    "MxCAD Basic Graphic Drawing" = "MxCAD基础图形绘制",
+    "Advanced Drawing in MxCAD" = "MxCAD基础绘图进阶"
 }
 
 enum apiZhDict {

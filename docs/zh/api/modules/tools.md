@@ -26,6 +26,7 @@ import { getJsonFromUrl } from "mxcad"
 - [\_ML\_String](tools.md#_ml_string)
 - [b64Decode](tools.md#b64decode)
 - [b64Encode](tools.md#b64encode)
+- [copyMcDbEntityProperties](tools.md#copymcdbentityproperties)
 - [crateHexString](tools.md#cratehexstring)
 - [createCursor](tools.md#createcursor)
 - [createMdGeLongLongArrayFormAryId](tools.md#createmdgelonglongarrayformaryid)
@@ -51,6 +52,7 @@ import { getJsonFromUrl } from "mxcad"
 | `_ML_String` | (`strId`: `string`, `str`: `string`) => `string` |
 | `b64Decode` | (`str`: `string`) => `string` |
 | `b64Encode` | (`str`: `string`) => `string` |
+| `copyMcDbEntityProperties` | (`fromEnt`: [`McDbEntity`](../classes/2d.McDbEntity.md), `toEnt`: [`McDbEntity`](../classes/2d.McDbEntity.md)) => `void` |
 | `createCursor` | (`cursorSize`: `number`, `targetFrameSize`: `number`, `color`: `string`) => `any` |
 | `createMdGeLongLongArrayFormAryId` | (`aryId`: [`McObjectId`](../classes/2d.McObjectId.md)[]) => `any` |
 | `downloadFile` | (`blob`: `any`, `filename`: `string`) => `void` |
@@ -142,6 +144,30 @@ Base64 编码
 
 ___
 
+### copyMcDbEntityProperties
+
+▸ **copyMcDbEntityProperties**(`fromEnt`, `toEnt`): `void`
+
+复制一个 McDbEntity 对象的属性到另一个 McDbEntity 对象中
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `fromEnt` | [`McDbEntity`](../classes/2d.McDbEntity.md) | 源 McDbEntity 对象 |
+| `toEnt` | [`McDbEntity`](../classes/2d.McDbEntity.md) | 目标 McDbEntity 对象 |
+
+#### Returns
+
+`void`
+
+**`Description`**
+
+该函数会将源对象的图层、线型、线型比例、线宽、真实颜色和文字样式等属性复制到目标对象中。
+该函数主要用于在 MxCAD 中进行对象属性的批量复制，以便快速创建具有相同属性的新对象。
+
+___
+
 ### crateHexString
 
 ▸ **crateHexString**(`str`): `string`
@@ -158,23 +184,35 @@ ___
 
 `string`
 
+16进制字符串
+
+**`String`**
+
+str 目标字符串
+
 ___
 
 ### createCursor
 
 ▸ **createCursor**(`cursorSize?`, `targetFrameSize?`, `color?`): `any`
 
+创建一个自定义的鼠标光标对象
+
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `cursorSize` | `number` | `128` |
-| `targetFrameSize` | `number` | `10` |
-| `color` | `string` | `"#ffffff"` |
+| Name | Type | Default value | Description |
+| :------ | :------ | :------ | :------ |
+| `cursorSize` | `number` | `128` | 鼠标大小 |
+| `targetFrameSize` | `number` | `10` | 目标框大小 |
+| `color` | `string` | `"#ffffff"` | 光标颜色 |
 
 #### Returns
 
 `any`
+
+**`Description`**
+
+该函数会根据传入的参数，生成一个包含不同类型光标的对象，包括矩形、十字、普通和抓取光标。
 
 ___
 
@@ -182,15 +220,41 @@ ___
 
 ▸ **createMdGeLongLongArrayFormAryId**(`aryId`): `any`
 
+创建一个 MdGeLongLongArray 对象，并将传入的 McObjectId 数组中的 id 值添加到该对象中。
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `aryId` | [`McObjectId`](../classes/2d.McObjectId.md)[] |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `aryId` | [`McObjectId`](../classes/2d.McObjectId.md)[] | McObjectId 数组 |
 
 #### Returns
 
 `any`
+
+MdGeLongLongArray 对象
+
+**`Description`**
+
+该函数会创建一个新的 MdGeLongLongArray 对象，并遍历传入的 McObjectId 数组，将每个对象的 id 值添加到 MdGeLongLongArray 中。
+该函数主要用于在 MxCAD 中处理对象 ID 的集合，以便进行批量操作或传递给其他函数使用。
+
+**`Example`**
+
+```ts
+import { MxCADUtility, MxCADResbuf, MxCpp } from "mxdraw";
+// 选择多个对象并合并它们
+   async function Mx_Join() {
+     let filter = new MxCADResbuf();
+     filter.AddMcDbEntityTypes("LWPOLYLINE,ARC,LINE");
+     let aryId = await MxCADUtility.userSelect("选择要合并的对象", filter);
+     if (aryId.length == 0) {
+       return;
+     }
+     
+     MxCpp.App.MxCADAssist.MxJoin(createMdGeLongLongArrayFormAryId(aryId));
+   }
+```
 
 ___
 
@@ -319,7 +383,7 @@ ___
 
 ▸ **saveAsFileDialog**(`«destructured»`): [`Promise`]( https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise )\<`undefined` \| ``false`` \| [`FileSystemFileHandle`]( https://developer.mozilla.org/docs/Web/API/FileSystemFileHandle ) & \{ `createWritable`: () => [`Promise`]( https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise )\<[`WritableStreamDefaultWriter`]( https://developer.mozilla.org/docs/Web/API/WritableStreamDefaultWriter )\<`any`\>\>  }\>
 
-文件下载保存（另存为只支持 Chrome86 或 Edge 86 以及 Opera 72）兼容 iE10等较低版本的浏览器
+文件下载保存弹框（另存为只支持 Chrome86 或 Edge 86 以及 Opera 72）兼容 iE10等较低版本的浏览器
 
 #### Parameters
 
@@ -333,3 +397,43 @@ ___
 #### Returns
 
 [`Promise`]( https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise )\<`undefined` \| ``false`` \| [`FileSystemFileHandle`]( https://developer.mozilla.org/docs/Web/API/FileSystemFileHandle ) & \{ `createWritable`: () => [`Promise`]( https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise )\<[`WritableStreamDefaultWriter`]( https://developer.mozilla.org/docs/Web/API/WritableStreamDefaultWriter )\<`any`\>\>  }\>
+
+**`Example`**
+
+```ts
+// 导出DWG文件
+   import { MxCpp, MxTools } from "mxcad";
+
+   async function Mx_Export_DWG() {
+       const baseUrl = "http://localhost:1337";
+       const mxfilepath = "/mxcad/file/";
+       const saveDwgUrl = baseUrl + "/mxcad/savedwg";
+       // 把mxweb文件 ，保存到服务器上，然后转换成 dwg文件 ，再下载。
+       MxCpp.getCurrentMxCAD().saveFileToUrl(saveDwgUrl, (iResult: number, sserverResult: string) => {
+           try {
+               let ret = JSON.parse(sserverResult);
+               if (ret.ret == "ok") {
+                   let filePath = baseUrl + mxfilepath + ret.file;
+                   fetch(filePath).then(async (res) => {
+                       const blob = await res.blob()
+                       MxTools.saveAsFileDialog({
+                           blob,
+                           filename: ret.file,
+                           types: [{
+                               description: "dwg图纸",
+                               accept: {
+                                   "application/octet-stream": [".dwg"],
+                               },
+                           }]
+                       })
+                   })
+               }
+               else {
+                   console.log(sserverResult);
+               }
+           } catch {
+               console.log("Mx: sserverResult error");
+           }
+       });
+   };
+```

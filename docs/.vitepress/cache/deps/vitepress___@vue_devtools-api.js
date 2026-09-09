@@ -1,4 +1,4 @@
-import "./chunk-5FUTL2UF.js";
+import "./chunk-PR4QN5HX.js";
 
 // node_modules/@vue/devtools-shared/dist/index.js
 var __create = Object.create;
@@ -2658,7 +2658,7 @@ init_esm_shims2();
 init_esm_shims2();
 var TIMELINE_LAYERS_STATE_STORAGE_ID = "__VUE_DEVTOOLS_KIT_TIMELINE_LAYERS_STATE__";
 function getTimelineLayersStateFromStorage() {
-  if (!isBrowser || typeof localStorage === "undefined" || localStorage === null) {
+  if (typeof window === "undefined" || !isBrowser || typeof localStorage === "undefined" || localStorage === null) {
     return {
       recordingState: false,
       mouseEventEnabled: false,
@@ -2668,7 +2668,7 @@ function getTimelineLayersStateFromStorage() {
       selected: ""
     };
   }
-  const state = localStorage.getItem(TIMELINE_LAYERS_STATE_STORAGE_ID);
+  const state = typeof localStorage.getItem !== "undefined" ? localStorage.getItem(TIMELINE_LAYERS_STATE_STORAGE_ID) : null;
   return state ? JSON.parse(state) : {
     recordingState: false,
     mouseEventEnabled: false,
